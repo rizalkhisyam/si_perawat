@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -16,8 +17,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('login', [
+        'title' => 'Wellcome'
+    ]);
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 Route::get('/perawat', [PerawatController::class, 'index'])->name('perawat');
+Route::get('/ruangan', [RuanganController::class, 'index'])->name('ruangan');

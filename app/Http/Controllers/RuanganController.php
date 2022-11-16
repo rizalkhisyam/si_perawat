@@ -15,7 +15,9 @@ class RuanganController extends Controller
      */
     public function index()
     {
-        //
+        return view('ruangan', [
+            "title" => "Ruangan"
+        ]);
     }
 
     /**
