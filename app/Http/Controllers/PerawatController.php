@@ -15,8 +15,10 @@ class PerawatController extends Controller
      */
     public function index()
     {
+        $data_perawat = Perawat::all();
         return view('perawat', [
-            "title" => "Perawat"
+            "title" => "Perawat",
+            "datas" => $data_perawat
         ]);
     }
 
