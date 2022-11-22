@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Perawat;
 use App\Http\Requests\StorePerawatRequest;
 use App\Http\Requests\UpdatePerawatRequest;
+use Illuminate\Support\Facades\Redirect;
 
 class PerawatController extends Controller
 {
@@ -40,7 +41,17 @@ class PerawatController extends Controller
      */
     public function store(StorePerawatRequest $request)
     {
-        //
+
+        Perawat::create([
+            'nama' => $request->nama,
+            'usia' => $request->usia,
+            'jenis_kelamin' => $request->jenis_kelamin,
+            'status_pendidikan' => $request->status_pendidikan,
+            'lama_bekerja' => $request->lama_bekerja,
+            'status' => $request->status,
+            'jenjang_karir' => $request->jenjang_karir
+        ]);
+        return back();
     }
 
     /**
@@ -83,8 +94,9 @@ class PerawatController extends Controller
      * @param  \App\Models\Perawat  $perawat
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Perawat $perawat)
+    public function destroy($id)
     {
-        //
+        $test = Perawat::find($id)->delete();
+        return back();
     }
 }

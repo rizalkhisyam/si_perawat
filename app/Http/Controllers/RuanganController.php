@@ -83,6 +83,6 @@ class RuanganController extends Controller
      */
     public function destroy(Ruangan $ruangan)
     {
-        //
+        
     }
 }

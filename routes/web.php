@@ -23,5 +23,9 @@ Route::get('/', function () {
 });
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
-Route::get('/perawat', [PerawatController::class, 'index'])->name('perawat');
+
+Route::get('perawat', [PerawatController::class, 'index'])->name('perawat');
+Route::delete('perawat/{id}', [PerawatController::class, 'destroy'])->name('delete-perawat');
+Route::post('perawat', [PerawatController::class, 'store'])->name('create-perawat');
+
 Route::get('/ruangan', [RuanganController::class, 'index'])->name('ruangan');

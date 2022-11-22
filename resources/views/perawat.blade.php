@@ -10,7 +10,7 @@
                       <h6 class="mb-0">Daftar Perawat</h6>
                     </div>
                     <div class="col-6 text-end">
-                      <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="material-icons text-sm">add</i>&nbsp;&nbsp;Tambah Data Perawat</a>
+                      <button class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal" ><i class="material-icons text-sm">add</i>&nbsp;&nbsp;Tambah Data Perawat</button>
                     </div>
                   </div>
                 </div>
@@ -48,12 +48,35 @@
                         <span class="badge badge-sm bg-gradient-success">{{$data->jenjang_karir}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">{{$data->lama_bekerja}} Tahun</span>
+                        <span class="text-secondary text-xs font-weight-bold">{{$data->lama_bekerja}}</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      <div class="ms-auto d-flex justify-content-center">
+                        <a class="btn btn-link text-dark px-3 mb-0" href="javascript:;"><i class="material-icons text-sm me-2">edit</i>Edit</a>
+                        <button class="btn btn-link text-danger text-gradient px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalDelete"><i class="material-icons text-sm me-2">delete</i>Delete</button>
+                        
+                        <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                          <div class="modal-dialog">
+                            <div class="modal-content">
+                              <div class="modal-header">
+                                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Data</h1>
+                                <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+                              </div>
+                              <div class="modal-body">
+                                  Apakah anda yakin ingin menghapus data "{{$data->nama}}" ?
+                              </div>
+                              <div class="modal-footer">
+                                <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
+                                <form action="{{ route('delete-perawat', $data->id) }}" method="POST">
+                                  @csrf
+                                  @method('DELETE')
+                                  <button type="submit" class="btn btn-primary">Delete</button>
+                                </form>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                       </td>
                     </tr>
                     @endforeach
@@ -64,4 +87,84 @@
           </div>
         </div>
       </div>
+
+      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Perawat</h1>
+              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+            </div>
+            <div class="modal-body">
+                <form role="form" action="{{ route('create-perawat') }}" method="POST">
+                  @csrf
+                    <span>Nama Perawat</span>
+                    <div class="input-group input-group-outline mb-3">
+                      <input type="text" class="form-control" name="nama" id="nama">
+                    </div>
+
+                    <span>Usia (Tahun)</span>
+                    <div class="input-group input-group-outline mb-3">
+                      <input type="number" class="form-control" name="usia" id="usia">
+                      <span class="input-group-text" id="inputGroup-sizing-default"></span>
+                    </div>
+
+                    <span>Jenis Kelamin</span>
+                    <div class="input-group input-group-outline mb-3">
+                      <select class="form-control" aria-label="Default select example" name="jenis_kelamin" id="jenis_kelamin">
+                        <option selected>-- Pilih salah satu --</option>
+                        <option value="Pria">Pria</option>
+                        <option value="Wanita">Wanita</option>
+                      </select>
+                    </div>
+
+                    <span>Status Pendidikan</span>
+                    <div class="input-group input-group-outline mb-3">
+                      <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan">
+                        <option selected>-- Pilih salah satu --</option>
+                        <option value="Strata Satu">Strata Satu</option>
+                        <option value="Magister">Magister</option>
+                        <option value="Doctor">Doctor</option>
+                        <option value="Tidak Sekolah">Tidak Sekolah</option>
+                      </select>
+                    </div>
+
+                    <span>Status Kepegawaian</span>
+                    <div class="input-group input-group-outline mb-3">
+                      <select class="form-control" aria-label="Default select example" name="status" id="status">
+                        <option selected>-- Pilih salah satu --</option>
+                        <option value="Pegawai Tetap">Pegawai Tetap</option>
+                        <option value="Pegawai Kontrak">Pegawai Kontrak</option>
+                        <option value="Magang">Magang</option>
+                      </select>
+                    </div>
+
+                    <span>Lama Bekerja, contoh: 5 bulan atau 1 tahun</span>
+                    <div class="input-group input-group-outline mb-3">
+                      <input type="text" class="form-control" name="lama_bekerja" id="lama_bekerja">
+                    </div>
+
+                    <span>Jenjang Karir</span>
+                    <div class="input-group input-group-outline mb-3">
+                      <select class="form-control" aria-label="Default select example" name="jenjang_karir" id="jenjang_karir">
+                        <option selected>-- Pilih salah satu --</option>
+                        <option value="Perawat Pendidik">Perawat Pendidik</option>
+                        <option value="Perawat Klinis">Perawat Klinis</option>
+                        <option value="Perawat Manajer">Perawat Manajer</option>
+                        <option value="Perawat Peneliti/riset">Perawat Peneliti/riset</option>
+                      </select>
+                    </div>
+
+                    <div class="modal-footer">
+                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
+                      <button type="submit" class="btn btn-primary">Simpan</button>
+                    </div>
+                </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      
+
 @endsection
