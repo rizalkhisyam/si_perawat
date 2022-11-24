@@ -132,9 +132,9 @@
                         </div>
                       </div>
 
-                        <button class="btn btn-link text-danger text-gradient px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalDelete"><i class="material-icons text-sm me-2">delete</i>Delete</button>
+                        <button class="btn btn-link text-danger text-gradient px-3 mb-0" data-bs-toggle="modal" data-bs-target="#@('modelDelete'+{{$data->id}})"><i class="material-icons text-sm me-2">delete</i>Delete</button>
                         
-                        <div class="modal fade" id="modalDelete" tabindex="-1" aria-labelledby="{{$data->id}}" aria-hidden="true">
+                        <div class="modal fade" id="@('modelDelete'+{{$data->id}})" tabindex="-1" aria-labelledby="{{$data->id}}" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -146,7 +146,7 @@
                               </div>
                               <div class="modal-footer">
                                 <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
-                                <form id="myForm+{{$data->id}}" action="{{ route('delete-perawat', $data->id) }}" method="POST" >
+                                <form action="{{ route('delete-perawat', $data->id) }}" method="POST" >
                                   @csrf
                                   @method('DELETE')
                                   <button type="submit" class="btn btn-primary">Delete</button>
