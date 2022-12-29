@@ -44,7 +44,7 @@
     </div>
   </div>
   <main class="main-content  mt-0">
-    <div class="page-header align-items-start min-vh-100" style="background-image: url({{ asset('img/bg-hospital.jpg') }});">
+    <div class="page-header align-items-start min-vh-100" style="background-image: url({{ asset('img/bg_login_2.jpg') }});">
       <span class="mask bg-gradient-dark opacity-6"></span>
       <div class="container my-auto">
         <div class="row">
@@ -54,7 +54,7 @@
                 <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
                   <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
                   <p class="mt-4 text-sm text-center text-white">
-                    Silahkan masuk menggunakan akun yang telah anda dapatkan dari admin
+                    Silahkan masuk menggunakan akun yang anda
                   </p>
                   <!-- <div class="row mt-3">
                     <div class="col-2 text-center ms-auto">
@@ -94,7 +94,7 @@
                   </div>
                   <p class="mt-4 text-sm text-center">
                     Belum punya akun ?
-                    <span class="text-primary text-gradient font-weight-bold">Hubungi Admin</span>
+                    <span class="text-primary text-gradient font-weight-bold">Daftar disini</span>
                   </p>
                 </form>
               </div>

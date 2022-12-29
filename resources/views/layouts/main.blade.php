@@ -28,6 +28,7 @@
 
   <link rel="stylesheet" href="{{ asset('css/nucleo-icons.css') }}">
   <link rel="stylesheet" href="{{ asset('css/nucleo-svg.css') }}">
+  <link rel="stylesheet" href="{{ asset('css/style-new.css') }}">
   <!-- Font Awesome Icons -->
   <script src="https://kit.fontawesome.com/42d5adcbca.js" crossorigin="anonymous"></script>
   <!-- Material Icons -->
@@ -73,11 +74,11 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white " href="../pages/virtual-reality.html">
+          <a class="nav-link text-white {{ ($title === 'Pengukuran') ? 'bg-gradient-primary active' : '' }}" href="/pengukuran">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">category</i>
             </div>
-            <span class="nav-link-text ms-1">Category Kode Etik</span>
+            <span class="nav-link-text ms-1">Pengukuran</span>
           </a>
         </li>
         <li class="nav-item">

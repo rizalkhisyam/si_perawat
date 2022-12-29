@@ -15,8 +15,10 @@ class RuanganController extends Controller
      */
     public function index()
     {
+        $data_ruangan = Ruangan::all();
         return view('ruangan', [
-            "title" => "Ruangan"
+            "title" => "Ruangan",
+            "datas" => $data_ruangan
         ]);
     }
 
