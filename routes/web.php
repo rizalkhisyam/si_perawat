@@ -3,6 +3,7 @@
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\PengukuranController;
+use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RuanganController;
 use Illuminate\Support\Facades\Route;
 
@@ -22,6 +23,8 @@ Route::get('/', function () {
         'title' => 'Wellcome'
     ]);
 });
+Route::get('/register', [RegisterController::class, 'index'])->name('register');
+Route::post('/register', [RegisterController::class, 'store'])->name('register');
 
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
 
