@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengukuranController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RuanganController;
@@ -23,6 +24,8 @@ Route::get('/', function () {
         'title' => 'Wellcome'
     ]);
 });
+Route::post('/login', [LoginController::class, 'store'])->name('login-user');
+
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register');
 
