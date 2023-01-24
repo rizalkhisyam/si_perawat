@@ -2,18 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Auth;
-use Illuminate\Validation\ValidationException;
 
-class LoginController extends Controller
+class HasilController extends Controller
 {
-
-    // public function __construct()
-    // {
-    //     $this->middleware('guest');
-    // }
     /**
      * Display a listing of the resource.
      *
@@ -21,8 +13,8 @@ class LoginController extends Controller
      */
     public function index()
     {
-        return view('login', [
-            "title" => 'Login'
+        return view('hasil', [
+            "title" => "Hasil Pengukuran"
         ]);
     }
 
@@ -44,19 +36,7 @@ class LoginController extends Controller
      */
     public function store(Request $request)
     {
-        $attributes = $request->validate([
-            'email' => ['required', 'email'],
-            'password' => ['required']
-        ]);
-
-        if(Auth::attempt($attributes)){
-            $request->session()->regenerate();
-            return redirect()->intended('dashboard');
-        }
-
-        throw ValidationException::withMessages([
-            'email' => "Akun anda tidak ditemukan, silahkan registrasi terlebih dahulu"
-        ]);
+        //
     }
 
     /**
@@ -102,12 +82,5 @@ class LoginController extends Controller
     public function destroy($id)
     {
         //
-    }
-
-    public function logout(Request $request){
-        Auth::logout();
-        $request->session()->invalidate();
-        $request->session()->regenerateToken();
-        return redirect(RouteServiceProvider::HOME);
     }
 }

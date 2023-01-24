@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\HasilController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengukuranController;
 use App\Http\Controllers\RegisterController;
@@ -24,21 +25,25 @@ Route::get('/', function () {
         'title' => 'Wellcome'
     ]);
 });
+Route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 Route::post('/login', [LoginController::class, 'store'])->name('login-user');
+Route::post('/logout', [LoginController::class, 'logout'])->name('logout');
 
 Route::get('/register', [RegisterController::class, 'index'])->name('register');
 Route::post('/register', [RegisterController::class, 'store'])->name('register');
 
-Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
+Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
-Route::get('perawat', [PerawatController::class, 'index'])->name('perawat');
-Route::delete('perawat/{id}', [PerawatController::class, 'destroy'])->name('delete-perawat');
-Route::post('perawat', [PerawatController::class, 'store'])->name('create-perawat');
+Route::get('perawat', [PerawatController::class, 'index'])->name('perawat')->middleware('auth');
+Route::delete('perawat/{id}', [PerawatController::class, 'destroy'])->name('delete-perawat')->middleware('auth');
+Route::post('perawat', [PerawatController::class, 'store'])->name('create-perawat')->middleware('auth');
 
-Route::get('/ruangan', [RuanganController::class, 'index'])->name('ruangan');
-Route::get('/pengukuran', [PengukuranController::class, 'index'])->name('pengukuran');
-Route::post('/simpan-data-1', [PengukuranController::class, 'create'])->name('simpan-1');
-Route::post('/pengukuran-1', [PengukuranController::class, 'pengukuran1'])->name('pengukuran-1');
-Route::post('/pengukuran-2', [PengukuranController::class, 'pengukuran2'])->name('pengukuran-2');
-Route::post('/pengukuran-3', [PengukuranController::class, 'pengukuran3'])->name('pengukuran-3');
-Route::post('/pengukuran-4', [PengukuranController::class, 'pengukuran4'])->name('pengukuran-4');
+Route::get('/ruangan', [RuanganController::class, 'index'])->name('ruangan')->middleware('auth');
+Route::get('/pengukuran', [PengukuranController::class, 'index'])->name('pengukuran')->middleware('auth');
+Route::post('/simpan-data-1', [PengukuranController::class, 'create'])->name('simpan-1')->middleware('auth');
+Route::post('/pengukuran-1', [PengukuranController::class, 'pengukuran1'])->name('pengukuran-1')->middleware('auth');
+Route::post('/pengukuran-2', [PengukuranController::class, 'pengukuran2'])->name('pengukuran-2')->middleware('auth');
+Route::post('/pengukuran-3', [PengukuranController::class, 'pengukuran3'])->name('pengukuran-3')->middleware('auth');
+Route::post('/pengukuran-4', [PengukuranController::class, 'pengukuran4'])->name('pengukuran-4')->middleware('auth');
+
+Route::get('/hasil-pengukuran', [HasilController::class, 'index'])->name('hasil');

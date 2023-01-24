@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\pengukuran;
 use App\Http\Requests\StorepengukuranRequest;
 use App\Http\Requests\UpdatepengukuranRequest;
+use App\Models\Perawat;
+use App\Models\Ruangan;
 
 class PengukuranController extends Controller
 {
@@ -15,8 +17,12 @@ class PengukuranController extends Controller
      */
     public function index()
     {
+        $perawats = Perawat::all();
+        $ruangans = Ruangan::all();
         return view('Pengukuran', [
-            'title' => 'Pengukuran'
+            'title' => 'Pengukuran',
+            'data_perawats' => $perawats,
+            'data_ruangans' => $ruangans
         ]);
     }
 

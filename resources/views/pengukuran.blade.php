@@ -19,16 +19,18 @@
                     <label class="form-label">Nama Perawat</label>
                       <div class="input-group input-group-outline mb-5">
                       <select id="inputState" class="form-control">
-                        <option selected>Pilih Perawat</option>
-                        <option>...</option>
+                        @foreach($data_perawats as $perawat)
+                          <option>{{$perawat->nama}}</option>
+                        @endforeach
                         </select>
                       </div>
 
                       <label class="form-label">Ruangan</label>
                       <div class="input-group input-group-outline mb-3">
                       <select id="inputState" class="form-control">
-                        <option selected>Pilih Ruangan</option>
-                        <option>...</option>
+                        @foreach($data_ruangans as $ruangan)
+                        <option >{{$ruangan->nama_ruangan}}</option>
+                        @endforeach
                         </select>
                       </div>
                       <div class="text-center">
