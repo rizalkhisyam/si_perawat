@@ -47,11 +47,11 @@
                     <label class="form-label">Perawat wajib memperkenalkan diri kepada klien dan keluarganya pada setiap awal dan pamit pada akhir shift</label>
                       <div class="input-group input-group-outline mb-5">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
                         <label class="form-check-label" for="inlineRadio1">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
                         <label class="form-check-label" for="inlineRadio2">Tidak</label>
                         </div>
                       </div>
@@ -59,11 +59,11 @@
                       <label class="form-label">Perawat wajib memperkenalkan diri kepada klien dan keluarganya pada setiap awal dan pamit pada akhir shift</label>
                       <div class="input-group input-group-outline mb-5">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1">
                         <label class="form-check-label" for="inlineRadio1">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+                        <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="option2">
                         <label class="form-check-label" for="inlineRadio2">Tidak</label>
                         </div>
                       </div>

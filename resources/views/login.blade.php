@@ -107,7 +107,7 @@
                 © <script>
                   document.write(new Date().getFullYear())
                 </script>,
-                Rizal Khisyam
+                Sistem Informasi Kode Etik Perawat
               </div>
             </div>
             <div class="col-12 col-md-6">
