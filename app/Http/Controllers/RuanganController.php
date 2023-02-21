@@ -40,7 +40,13 @@ class RuanganController extends Controller
      */
     public function store(StoreRuanganRequest $request)
     {
-        //
+        Ruangan::create([
+            'nama_ruangan' => $request->nama_ruangan,
+            'nama_gedung' => $request->nama_gedung,
+            'daya_tampung' => $request->daya_tampung
+        ]);
+
+        return back();
     }
 
     /**
