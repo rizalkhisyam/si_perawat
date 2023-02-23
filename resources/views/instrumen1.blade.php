@@ -39,28 +39,28 @@
                     <!-- <div class="d-flex justify-content-center">
                         <span>Input data perawat untuk instrumen pengukuran</span>
                     </div> -->
-                    <form role="form" class="" action="{{ route('pengukuran-1') }}" method="POST">
+                    <form role="form" class="" action="{{ route('pengukuran-2') }}" method="POST">
                     @csrf
                     <div class="col-12 mb-2">
                     <span>1. Perawat dalam memberikan pelayanan keperawatan menghargai harkat dan martabat manusia, keunikan klien, dan tidak terpengaruh oleh pertimbangan kebangsaan, kesukuan, warna kulit, umur, jenis kelamin, aliran politik dan agama yang dianut serta kedudukan sosial</span>
                     </div>
                     <label class="form-label">Perawat wajib memperkenalkan diri kepada klien dan keluarganya pada setiap awal dan pamit pada akhir shift</label>
                       <div class="input-group input-group-outline mb-5">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Ya</label>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
-                        <label class="form-check-label" for="inlineRadio2">Tidak</label>
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions1" id="inlineRadio2" value="option2">
+                          <label class="form-check-label" for="inlineRadio2">Tidak</label>
                         </div>
                       </div>
 
                       <label class="form-label">Perawat wajib memperkenalkan diri kepada klien dan keluarganya pada setiap awal dan pamit pada akhir shift</label>
                       <div class="input-group input-group-outline mb-5">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1">
-                        <label class="form-check-label" for="inlineRadio1">Ya</label>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="radio" name="inlineRadioOptions3" id="inlineRadio1" value="option1">
+                          <label class="form-check-label" for="inlineRadio1">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="inlineRadioOptions4" id="inlineRadio2" value="option2">

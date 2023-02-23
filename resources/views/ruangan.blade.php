@@ -27,6 +27,11 @@
                                     <div class="input-group input-group-outline mb-3">
                                       <input type="text" class="form-control" name="nama_ruangan" id="nama_ruangan" value="">
                                     </div>
+                                    @error('nama_ruangan')
+                                      <div class="text-danger mb-2">
+                                        {{$message}}
+                                      </div>
+                                    @enderror
 
                                     <span>Nama Gedung</span>
                                     <div class="input-group input-group-outline mb-3">

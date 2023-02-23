@@ -42,10 +42,10 @@ Route::get('/ruangan', [RuanganController::class, 'index'])->name('ruangan')->mi
 Route::post('/ruangan', [RuanganController::class, 'store'])->name('simpan-data-ruangan')->middleware(('auth'));
 
 Route::get('/pengukuran', [PengukuranController::class, 'index'])->name('pengukuran')->middleware('auth');
-Route::post('/simpan-data-1', [PengukuranController::class, 'create'])->name('simpan-1')->middleware('auth');
 Route::post('/pengukuran-1', [PengukuranController::class, 'pengukuran1'])->name('pengukuran-1')->middleware('auth');
 Route::post('/pengukuran-2', [PengukuranController::class, 'pengukuran2'])->name('pengukuran-2')->middleware('auth');
 Route::post('/pengukuran-3', [PengukuranController::class, 'pengukuran3'])->name('pengukuran-3')->middleware('auth');
 Route::post('/pengukuran-4', [PengukuranController::class, 'pengukuran4'])->name('pengukuran-4')->middleware('auth');
+Route::post('/pengukuran-5', [PengukuranController::class, 'pengukuran5'])->name('pengukuran-5')->middleware('auth');
 
 Route::get('/hasil-pengukuran', [HasilController::class, 'index'])->name('hasil');

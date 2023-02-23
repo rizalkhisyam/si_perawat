@@ -26,28 +26,37 @@ class PengukuranController extends Controller
         ]);
     }
 
-    public function pengukuran1()
+    public function pengukuran1(StorepengukuranRequest $request)
+    {
+        dd($request);
+        // return view('Instrumen1', [
+        //     'title' => 'Pengukuran'
+        // ]);
+
+    }
+
+    public function pengukuran2()
     {
         return view('Instrumen2', [
             'title' => 'Pengukuran'
         ]);
     }
 
-    public function pengukuran2()
+    public function pengukuran3()
     {
         return view('Instrumen3', [
             'title' => 'Pengukuran'
         ]);
     }
 
-    public function pengukuran3()
+    public function pengukuran4()
     {
         return view('Instrumen4', [
             'title' => 'Pengukuran'
         ]);
     }
 
-    public function pengukuran4()
+    public function pengukuran5()
     {
         return view('Instrumen5', [
             'title' => 'Pengukuran'
