@@ -51,8 +51,15 @@
           <div class="col-lg-4 col-md-8 col-12 mx-auto">
             <div class="card z-index-0 fadeIn3 fadeInBottom">
               <div class="card-header p-0 position-relative mt-n4 mx-3 z-index-2">
-                <div class="bg-gradient-primary shadow-primary border-radius-lg py-3 pe-1">
-                  <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4>
+                <div class="bg-gradient-dark shadow-primary border-radius-lg py-3 pe-1">
+                  <div class="container row">
+                    <div class="col-lg-12 d-flex justify-content-center align-items-center">
+                      <img src="{{ asset('img/logo_si.png') }}" class="navbar-brand-img h-100" alt="main_logo">
+                      <span class="ms-1 font-weight-bold text-white">Si Keperawatan</span>
+                    </div>
+                  </div>
+                  <!-- <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4> -->
+                  <!-- <img style="width: 50%; height: 50%" src="{{ asset('img/illustrations/login_img.png') }}" alt=""> -->
                   @if(session()->has('success'))
                   <p class="mt-4 text-sm text-center text-white">
                     {{session()->get('success')}}
