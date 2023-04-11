@@ -21,12 +21,12 @@
                       <select id="inputState" class="form-control" name="id_perawat">
                         <option selected disabled>-- Pilih Perawat --</option>
                       @foreach($data_perawats as $perawat)
-                        <option value="{{$perawat->id}}">{{$perawat->nama}}</option>
+                        <option value="{{$perawat->id.'|'.$perawat->nama}}">{{$perawat->nama}}</option>
                       @endforeach
                       </select>
                     </div>
                     @error('id_perawat')
-                      <div class="text-danger ">
+                      <div class="text-danger">
                         *Pilih perawat yang akan dilakukan pengukuran
                       </div>
                     @enderror
@@ -36,12 +36,12 @@
                       <select id="inputState" class="form-control" name="id_ruangan">
                       <option selected disabled>-- Pilih Ruangan --</option>
                       @foreach($data_ruangans as $ruangan)
-                        <option value="{{$ruangan->id}}">{{$ruangan->nama_ruangan}}</option>
+                        <option value="{{$ruangan->id.'|'.$ruangan->nama_ruangan}}">{{$ruangan->nama_ruangan}}</option>
                       @endforeach
                       </select>
                     </div>
                     @error('id_ruangan')
-                      <div class="text-danger ">
+                      <div class="text-danger">
                         *Pilih ruangan perawat
                       </div>
                     @enderror

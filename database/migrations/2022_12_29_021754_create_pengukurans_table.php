@@ -19,6 +19,8 @@ class CreatePengukuransTable extends Migration
             $table->string('ruangan');
             $table->bigInteger('id_perawat')->unsigned();
             $table->foreign('id_perawat')->references('id')->on('perawats');
+            $table->bigInteger('id_user')->unsigned();
+            $table->foreign('id_user')->references('id')->on('users');
             $table->bigInteger('id_ruangan')->unsigned();
             $table->foreign('id_ruangan')->references('id')->on('ruangans');
             $table->integer('skor_1')->nullable();

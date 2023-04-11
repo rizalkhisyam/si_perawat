@@ -2,11 +2,14 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\InstrumentRequest1;
 use App\Models\pengukuran;
 use App\Http\Requests\StorepengukuranRequest;
 use App\Http\Requests\UpdatepengukuranRequest;
 use App\Models\Perawat;
 use App\Models\Ruangan;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class PengukuranController extends Controller
 {
@@ -28,15 +31,23 @@ class PengukuranController extends Controller
 
     public function pengukuran1(StorepengukuranRequest $request)
     {
-        dd($request);
-        // return view('Instrumen1', [
-        //     'title' => 'Pengukuran'
-        // ]);
-
+        $data_perawat = explode('|', $request->id_perawat);
+        $data_ruangan = explode('|', $request->id_ruangan);
+        pengukuran::create([
+            'nama' => $data_perawat[1],
+            'ruangan' => $data_ruangan[1],
+            'id_perawat' => $data_perawat[0],
+            'id_ruangan' => $data_ruangan[0],
+            'id_user' => Auth::user()->id
+        ]);
+        return view('Instrumen1', [
+            'title' => 'Pengukuran'
+        ]);
     }
 
-    public function pengukuran2()
+    public function pengukuran2(Request $request)
     {
+        dd($request);
         return view('Instrumen2', [
             'title' => 'Pengukuran'
         ]);
@@ -59,6 +70,12 @@ class PengukuranController extends Controller
     public function pengukuran5()
     {
         return view('Instrumen5', [
+            'title' => 'Pengukuran'
+        ]);
+    }
+
+    public function instrumen1(){
+        return view('Instrumen1', [
             'title' => 'Pengukuran'
         ]);
     }
