@@ -59,20 +59,22 @@ class PengukuranController extends Controller
     {
         $data_perawat = explode('|', $request->id_perawat);
         $data_ruangan = explode('|', $request->id_ruangan);
-        pengukuran::create([
+        $pengukuran = pengukuran::create([
             'nama' => $data_perawat[1],
             'ruangan' => $data_ruangan[1],
             'id_perawat' => $data_perawat[0],
             'id_ruangan' => $data_ruangan[0],
             'id_user' => Auth::user()->id
         ]);
-
+        $id_pengukuran = $pengukuran->id;
+        // dd($id_pengukuran);
         $data_perawat = Perawat::find($data_perawat[0]);
         return view('Pengukuran/Instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawat' => $data_perawat,
             'id_ruangan' => $data_ruangan[0],
-            'nama_ruangan' => $data_ruangan[1]
+            'nama_ruangan' => $data_ruangan[1],
+            'id_pengukuran' => $id_pengukuran
         ]);
     }
 
