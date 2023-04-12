@@ -26,7 +26,9 @@
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 3</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 4</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 5</th>
-                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Kesimpulan</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nilai Interval</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nilai Perilaku</th>
+                      <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Category Perilaku</th>
                       <th class="text-secondary opacity-7"></th>
                     </tr>
                   </thead>

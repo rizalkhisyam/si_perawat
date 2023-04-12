@@ -6,39 +6,21 @@
           <div class="card my-4">
           <div class="card-header pb-0 p-3">
                   <div class="row">
-                    <div class="col-12 d-flex align-items-center mb-2">
+                    <div class="col-12 d-flex align-items-center justify-content-center mb-2">
                       <h6 class="mb-0">Instrumen Pengukuran Standar Perilaku Kode Etik Keperawatan - Perawat dan Klien</h6>
                     </div>
-
-                    <div class="col-lg-12 steps-form mb-7 mt-5">
-                        <div class="steps-row setup-panel">
-                            <div class="steps-step">
-                            <a href="#" type="button" class="btn btn-primary btn-circle">1</a>
-                            <p>Perawat dan Klien</p>
-                            </div>
-                            <div class="steps-step">
-                            <a href="#" type="button" class="btn btn-light btn-circle" disabled="disabled">2</a>
-                            <p>Perawat dan Praktek</p>
-                            </div>
-                            <div class="steps-step">
-                            <a href="#" type="button" class="btn btn-light btn-circle" disabled="disabled">3</a>
-                            <p>Perawat dan Masyarakat</p>
-                            </div>
-                            <div class="steps-step">
-                            <a href="#" type="button" class="btn btn-light btn-circle" disabled="disabled">4</a>
-                            <p>Perawat dan Teman Sejawat</p>
-                            </div>
-                            <div class="steps-step">
-                            <a href="#" type="button" class="btn btn-light btn-circle" disabled="disabled">5</a>
-                            <p>Perawat dan Profesi</p>
-                            </div>
+                    <ul class="list-group mt-5">
+                        <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                        <div class="d-flex flex-column">
+                            <h6 class="mb-3 text-sm">{{$data_perawat->nama}}</h6>
+                            <h6 class="mb-3 text-sm">{{$data_ruangan}}</h6>
+                            <span class="mb-2 text-xs">Jenis Kelamin: <span class="text-dark font-weight-bold ms-sm-2">{{$data_perawat->jenis_kelamin}}</span></span>
+                            <span class="mb-2 text-xs">Status: <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->status}}</span></span>
+                            <span class="text-xs">Jenjang Karir: <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->jenjang_karir}}</span></span>
                         </div>
-                    </div>
-
-                    <div class="container col-lg-10">
-                    <!-- <div class="d-flex justify-content-center">
-                        <span>Input data perawat untuk instrumen pengukuran</span>
-                    </div> -->
+                        </li>
+                    </ul>
+                    <div class="container col-lg-10 mt-5">
                     <form role="form" class="" action="{{ route('pengukuran-2') }}" method="POST">
                     @csrf
                     @method('POST')

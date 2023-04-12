@@ -29,6 +29,16 @@ class PengukuranController extends Controller
         ]);
     }
 
+    public function klien(){
+        $perawats = Perawat::all();
+        $ruangans = Ruangan::all();
+        return view('Pengukuran/Klien', [
+            'title' => 'Pengukuran Perawat Dan Klien',
+            'data_perawats' => $perawats,
+            'data_ruangans' => $ruangans
+        ]);
+    }
+
     public function pengukuran1(StorepengukuranRequest $request)
     {
         $data_perawat = explode('|', $request->id_perawat);
@@ -45,9 +55,41 @@ class PengukuranController extends Controller
         ]);
     }
 
+    public function instrumen_klien(StorepengukuranRequest $request)
+    {
+        $data_perawat = explode('|', $request->id_perawat);
+        $data_ruangan = explode('|', $request->id_ruangan);
+        pengukuran::create([
+            'nama' => $data_perawat[1],
+            'ruangan' => $data_ruangan[1],
+            'id_perawat' => $data_perawat[0],
+            'id_ruangan' => $data_ruangan[0],
+            'id_user' => Auth::user()->id
+        ]);
+
+        $ruangan = [
+            'id_ruangan' => $data_ruangan[0],
+            'nama_ruangan' => $data_ruangan[1]
+        ];
+        // dd($ruangan);
+        $data_perawat = Perawat::find($data_perawat[0]);
+        return view('Pengukuran/Instrumen_pengukuran_klien', [
+            'title' => 'Pengukuran Perawat Dan Klien',
+            'data_perawat' => $data_perawat,
+            'data_ruangan' => $data_ruangan[1]
+        ]);
+    }
+
     public function pengukuran2(Request $request)
     {
-        dd($request);
+        $data = $request->all();
+        $skor = 0;
+        $skorLength = 0;
+        foreach ($data as $key => $value) {
+            $skor += (int)$value;
+        }
+        dd($skor);
+        dd($request->options1);
         return view('Instrumen2', [
             'title' => 'Pengukuran'
         ]);

@@ -90,17 +90,49 @@
             <span class="nav-link-text ms-1">Hasil Laporan</span>
           </a>
         </li>
-        <!-- <li class="nav-item mt-3">
-          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Account pages</h6>
-        </li> -->
-        <!-- <li class="nav-item">
+        <li class="nav-item mt-3">
+          <h6 class="ps-4 ms-2 text-uppercase text-xs text-white font-weight-bolder opacity-8">Menu Pengukuran</h6>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white {{ ($title === 'Pengukuran Perawat Dan Klien') ? 'bg-gradient-primary active' : '' }}" href="/pengukuran-klien">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-user-plus opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Perawat dan Klien</span>
+          </a>
+        </li>
+        <li class="nav-item">
           <a class="nav-link text-white " href="../pages/profile.html">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fa fa-user-plus opacity-10"></i>
             </div>
-            <span class="nav-link-text ms-1">Tambah User Login</span>
+            <span class="nav-link-text ms-1">Perawat dan Praktek</span>
           </a>
-        </li> -->
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/profile.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-user-plus opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Perawat dan Masyarakat</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/profile.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-user-plus opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Perawat dan Teman Sejawat</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link text-white " href="../pages/profile.html">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-user-plus opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Perawat dan Profesi</span>
+          </a>
+        </li>
       </ul>
     </div>
     <div class="sidenav-footer position-absolute w-100 bottom-0 ">

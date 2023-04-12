@@ -50,4 +50,9 @@ Route::post('/pengukuran-3', [PengukuranController::class, 'pengukuran3'])->name
 Route::post('/pengukuran-4', [PengukuranController::class, 'pengukuran4'])->name('pengukuran-4')->middleware('auth');
 Route::post('/pengukuran-5', [PengukuranController::class, 'pengukuran5'])->name('pengukuran-5')->middleware('auth');
 
+//new route
+Route::get('/pengukuran-klien', [PengukuranController::class, 'klien'])->name('pengukuran-klien')->middleware('auth');
+Route::post('/pengukuran-instrumen-klien', [PengukuranController::class, 'instrumen_klien'])->name('pengukuran-instrumen-klien')->middleware('auth');
+
+
 Route::get('/hasil-pengukuran', [HasilController::class, 'index'])->name('hasil');
