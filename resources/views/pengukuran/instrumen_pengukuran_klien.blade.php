@@ -12,16 +12,16 @@
                     <ul class="list-group mt-5">
                         <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
                         <div class="d-flex flex-column">
-                            <h6 class="mb-3 text-sm">{{$data_perawat->nama}}</h6>
-                            <h6 class="mb-3 text-sm">{{$data_ruangan}}</h6>
-                            <span class="mb-2 text-xs">Jenis Kelamin: <span class="text-dark font-weight-bold ms-sm-2">{{$data_perawat->jenis_kelamin}}</span></span>
-                            <span class="mb-2 text-xs">Status: <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->status}}</span></span>
-                            <span class="text-xs">Jenjang Karir: <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->jenjang_karir}}</span></span>
+                            <span class="mb-2 text-xs">Nama Perawat : <span class="text-dark font-weight-bold ms-sm-2">{{$data_perawat->nama}}</span></span>
+                            <span class="mb-2 text-xs">Nama Ruangan : <span class="text-dark font-weight-bold ms-sm-2">{{$nama_ruangan}}</span></span>
+                            <span class="mb-2 text-xs">Jenis Kelamin : <span class="text-dark font-weight-bold ms-sm-2">{{$data_perawat->jenis_kelamin}}</span></span>
+                            <span class="mb-2 text-xs">Status : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->status}}</span></span>
+                            <span class="text-xs">Jenjang Karir : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->jenjang_karir}}</span></span>
                         </div>
                         </li>
                     </ul>
                     <div class="container col-lg-10 mt-5">
-                    <form role="form" class="" action="{{ route('pengukuran-2') }}" method="POST">
+                    <form role="form" class="" action="{{ route('hasil-pengukuran-1') }}" method="POST">
                     @csrf
                     @method('POST')
                     <div class="col-12 mb-2">
@@ -38,11 +38,6 @@
                           <label class="form-check-label" for="radio2">Tidak</label>
                         </div>
                       </div>
-                      <!-- @error('options1')
-                        <div class="text-danger">
-                          *Maaf, jawaban tidak boleh kosong
-                        </div>
-                      @enderror -->
 
                       <label class="form-label">Perawat wajib memperkenalkan diri kepada klien dan keluarganya pada setiap awal dan pamit pada akhir shift</label>
                       <div class="input-group input-group-outline mb-2">

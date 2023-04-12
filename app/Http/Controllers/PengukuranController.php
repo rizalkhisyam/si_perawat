@@ -67,16 +67,12 @@ class PengukuranController extends Controller
             'id_user' => Auth::user()->id
         ]);
 
-        $ruangan = [
-            'id_ruangan' => $data_ruangan[0],
-            'nama_ruangan' => $data_ruangan[1]
-        ];
-        // dd($ruangan);
         $data_perawat = Perawat::find($data_perawat[0]);
         return view('Pengukuran/Instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawat' => $data_perawat,
-            'data_ruangan' => $data_ruangan[1]
+            'id_ruangan' => $data_ruangan[0],
+            'nama_ruangan' => $data_ruangan[1]
         ]);
     }
 
@@ -85,6 +81,19 @@ class PengukuranController extends Controller
         $data = $request->all();
         $skor = 0;
         $skorLength = 0;
+        foreach ($data as $key => $value) {
+            $skor += (int)$value;
+        }
+        dd($skor);
+        dd($request->options1);
+        return view('Instrumen2', [
+            'title' => 'Pengukuran'
+        ]);
+    }
+
+    public function pengukuran_instrumen1(Request $request){
+        $data = $request->all();
+        $skor = 0;
         foreach ($data as $key => $value) {
             $skor += (int)$value;
         }
