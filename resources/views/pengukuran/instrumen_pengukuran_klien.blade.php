@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.pengukuran')
 
 @section('content')
 <div class="row">
@@ -16,12 +16,14 @@
                             <span class="mb-2 text-xs">Nama Ruangan : <span class="text-dark font-weight-bold ms-sm-2">{{$nama_ruangan}}</span></span>
                             <span class="mb-2 text-xs">Jenis Kelamin : <span class="text-dark font-weight-bold ms-sm-2">{{$data_perawat->jenis_kelamin}}</span></span>
                             <span class="mb-2 text-xs">Status : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->status}}</span></span>
-                            <span class="text-xs">Jenjang Karir : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->jenjang_karir}}</span></span>
+                            <span class="mb-2 text-xs">Jenjang Karir : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->jenjang_karir}}</span></span>
+                            <span class="text-xs">Kode Pengukuran : <span class="text-dark ms-sm-2 font-weight-bold">{{$id_pengukuran}}</span></span>
+
                         </div>
                         </li>
                     </ul>
                     <div class="container col-lg-10 mt-5">
-                    <form role="form" class="" action="{{ route('hasil-pengukuran-1') }}" method="POST">
+                    <form role="form" class="" action="{{ route('hasil-pengukuran-1', $id_pengukuran) }}" method="POST">
                     @csrf
                     @method('POST')
                     <div class="col-12 mb-2">

@@ -42,17 +42,27 @@ Route::get('/ruangan', [RuanganController::class, 'index'])->name('ruangan')->mi
 Route::post('/ruangan', [RuanganController::class, 'store'])->name('simpan-data-ruangan')->middleware(('auth'));
 
 Route::get('/pengukuran', [PengukuranController::class, 'index'])->name('pengukuran')->middleware('auth');
-// Route::get('/pengukuran-1', [PengukuranController::class, 'instrumen1'])->name('pengukuran-1')->middleware('auth');
 
 Route::post('/pengukuran-1', [PengukuranController::class, 'pengukuran1'])->name('pengukuran-1')->middleware('auth');
 Route::post('/pengukuran-2', [PengukuranController::class, 'pengukuran2'])->name('pengukuran-2')->middleware('auth');
 Route::post('/pengukuran-3', [PengukuranController::class, 'pengukuran3'])->name('pengukuran-3')->middleware('auth');
 Route::post('/pengukuran-4', [PengukuranController::class, 'pengukuran4'])->name('pengukuran-4')->middleware('auth');
 Route::post('/pengukuran-5', [PengukuranController::class, 'pengukuran5'])->name('pengukuran-5')->middleware('auth');
+Route::get('/pengukuran-klien', [PengukuranController::class, 'klien'])->name('pengukuran-klien')->middleware('auth');
+Route::get('/hasil-pengukuran', [HasilController::class, 'index'])->name('hasil');
 
 //new route
-Route::get('/pengukuran-klien', [PengukuranController::class, 'klien'])->name('pengukuran-klien')->middleware('auth');
 Route::post('/pengukuran-instrumen-klien', [PengukuranController::class, 'instrumen_klien'])->name('pengukuran-instrumen-klien')->middleware('auth');
-Route::post('/hasil-pengukuran-instrumen-klien', [PengukuranController::class, 'pengukuran_instrumen1'])->name('hasil-pengukuran-1')->middleware('auth');
+Route::post('/hasil-pengukuran-instrumen-klien/{id}', [PengukuranController::class, 'pengukuran_instrumen1'])->name('hasil-pengukuran-1')->middleware('auth');
 
-Route::get('/hasil-pengukuran', [HasilController::class, 'index'])->name('hasil');
+Route::get('/pengukuran-instrumen-praktek/{id}', [PengukuranController::class, 'instrumen_praktek'])->name('pengukuran-instrumen-praktek')->middleware('auth');
+Route::post('/hasil-pengukuran-instrumen-praktek/{id}', [PengukuranController::class, 'pengukuran_instrumen2'])->name('hasil-pengukuran-2')->middleware('auth');
+
+Route::get('/pengukuran-instrumen-masyarakat/{id}', [PengukuranController::class, 'instrumen_masyarakat'])->name('pengukuran-instrumen-masyarakat')->middleware('auth');
+Route::post('/hasil-pengukuran-instrumen-masyarakat/{id}', [PengukuranController::class, 'pengukuran_instrumen3'])->name('hasil-pengukuran-3')->middleware('auth');
+
+Route::get('/pengukuran-instrumen-teman/{id}', [PengukuranController::class, 'instrumen_teman'])->name('pengukuran-instrumen-teman')->middleware('auth');
+Route::post('/hasil-pengukuran-instrumen-teman/{id}', [PengukuranController::class, 'pengukuran_instrumen4'])->name('hasil-pengukuran-4')->middleware('auth');
+
+Route::get('/pengukuran-instrumen-profesi/{id}', [PengukuranController::class, 'instrumen_profesi'])->name('pengukuran-instrumen-profesi')->middleware('auth');
+Route::post('/hasil-pengukuran-instrumen-profesi/{id}', [PengukuranController::class, 'pengukuran_instrumen5'])->name('hasil-pengukuran-5')->middleware('auth');

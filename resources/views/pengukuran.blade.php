@@ -14,7 +14,7 @@
                   <div class="d-flex justify-content-center">
                       <span>Input data perawat untuk instrumen pengukuran</span>
                   </div>
-                  <form role="form" class="" action="{{ route('pengukuran-1') }}" method="POST">
+                  <form role="form" class="" action="{{ route('pengukuran-instrumen-klien') }}" method="POST">
                   @csrf
                   <label class="form-label">Nama Perawat</label>
                     <div class="input-group input-group-outline">

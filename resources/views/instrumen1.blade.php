@@ -1,4 +1,4 @@
-@extends('layouts.main')
+@extends('layouts.pengukuran')
 
 @section('content')
 <div class="row">

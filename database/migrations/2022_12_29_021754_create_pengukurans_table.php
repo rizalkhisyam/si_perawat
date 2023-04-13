@@ -29,6 +29,8 @@ class CreatePengukuransTable extends Migration
             $table->integer('skor_4')->nullable();
             $table->integer('skor_5')->nullable();
             $table->integer('total_skor')->nullable();
+            $table->string('nilai_interval')->nullable();
+            $table->string('nilai_perilaku')->nullable();
             $table->string('kategori_nilai')->nullable();
             $table->timestamps();
         });

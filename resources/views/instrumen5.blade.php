@@ -36,9 +36,6 @@
                     </div>
 
                     <div class="container col-lg-6">
-                    <!-- <div class="d-flex justify-content-center">
-                        <span>Input data perawat untuk instrumen pengukuran</span>
-                    </div> -->
                     <form role="form" class="">
                         @csrf
                     <div class="col-12 mb-2">
