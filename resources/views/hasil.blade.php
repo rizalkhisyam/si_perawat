@@ -10,7 +10,7 @@
                       <h6 class="mb-0">Hasil Pengukuran</h6>
                     </div>
                     <div class="col-6 text-end">
-                      <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="material-icons text-sm">add</i>&nbsp;&nbsp;Tambah Data Ruangan</a>
+                      <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="material-icons text-sm">print</i>&nbsp;&nbsp;Cetak</a>
                     </div>
                   </div>
                 </div>
@@ -33,9 +33,58 @@
                     </tr>
                   </thead>
                   <tbody>
-                    <tr>
-                        <td></td>
+                    @foreach($datas as $data)
+                    <tr id="{{$data->id}}">
+                    <td>
+                    <div class="d-flex px-2 py-1">
+                          <div class="d-flex flex-column justify-content-center">
+                            <h6 class="mb-0 text-sm">{{$data->nama}}</h6>
+                          </div>
+                        </div>
+                      </td>
+                      <td>
+                        <p class="text-sm font-weight-bold mb-0">{{$data->ruangan}}</p>
+                      </td>
+                      <td>
+                        <p class="text-sm text-center font-weight-bold mb-0">{{$data->skor_1}}</p>
+                      </td>
+                      <td>
+                        <p class="text-sm text-center font-weight-bold mb-0">{{$data->skor_2}}</p>
+                      </td>
+                      <td>
+                        <p class="text-sm text-center font-weight-bold mb-0">{{$data->skor_3}}</p>
+                      </td>
+                      <td>
+                        <p class="text-sm text-center font-weight-bold mb-0">{{$data->skor_4}}</p>
+                      </td>
+                      <td>
+                        <p class="text-sm text-center font-weight-bold mb-0">{{$data->skor_5}}</p>
+                      </td>
+                      <td>
+                        <p class="text-sm text-center font-weight-bold mb-0">{{$data->nilai_interval}}</p>
+                      </td>
+                      <td>
+                        <p class="text-sm text-center font-weight-bold mb-0">{{$data->nilai_perilaku}}</p>
+                      </td>
+                      @if($data->kategori_nilai == 'Prima')
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge" style="background-color: #04009A;">{{$data->kategori_nilai}}</span>
+                      </td>
+                      @elseif($data->kategori_nilai == 'Baik')
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge" style="background-color: #3250fa;">{{$data->kategori_nilai}}</span>
+                      </td>
+                      @elseif($data->kategori_nilai == 'Cukup')
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge" style="background-color: #609966;">{{$data->kategori_nilai}}</span>
+                      </td>
+                      @elseif($data->kategori_nilai == 'Buruk')
+                      <td class="align-middle text-center text-sm">
+                        <span class="badge" style="background-color: #DF2E38;">{{$data->kategori_nilai}}</span>
+                      </td>
+                      @endif
                     </tr>
+                    @endforeach
                   </tbody>
                 </table>
               </div>

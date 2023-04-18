@@ -30,11 +30,11 @@
                     <label class="form-label">Perawat dibawah institusi tempat bekerja wajib melakukan kegiatan pengabdian masyarakat satu kali dalam setahun</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options1" id="radio1" value="1">
+                        <input class="form-check-input" type="radio" name="options1" id="radio1" value="1" required>
                         <label class="form-check-label" for="radio1">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options1" id="radio2" value="0">
+                        <input class="form-check-input" type="radio" name="options1" id="radio2" value="0" required>
                         <label class="form-check-label" for="radio2">Tidak</label>
                         </div>
                       </div>
@@ -42,11 +42,11 @@
                       <label class="form-label">Perawat wajib memberikan informasi pada	masyarakat tentang area cakupan pelayanan keperawatan yang diberikan dengan menggunakan media yang disepakati secara berkala</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options2" id="radio3" value="1">
+                        <input class="form-check-input" type="radio" name="options2" id="radio3" value="1" required>
                         <label class="form-check-label" for="radio3">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options2" id="radio4" value="0">
+                        <input class="form-check-input" type="radio" name="options2" id="radio4" value="0" required>
                         <label class="form-check-label" for="radio4">Tidak</label>
                         </div>
                       </div>
@@ -54,11 +54,11 @@
                       <label class="form-label">Perawat dapat ikut serta menyelesaikan masalah kesehatan masyarakat sesuai dengan kompetensinya</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options3" id="radio5" value="1">
+                        <input class="form-check-input" type="radio" name="options3" id="radio5" value="1" required>
                         <label class="form-check-label" for="radio5">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options3" id="radio6" value="0">
+                        <input class="form-check-input" type="radio" name="options3" id="radio6" value="0" required>
                         <label class="form-check-label" for="radio6">Tidak</label>
                         </div>
                       </div>
@@ -66,11 +66,11 @@
                       <label class="form-label">Perawat	wajib ikut berperan serta dalam mengembangkan teknologi keperawatan.</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options4" id="radio7" value="1">
+                        <input class="form-check-input" type="radio" name="options4" id="radio7" value="1" required>
                         <label class="form-check-label" for="radio7">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options4" id="radio8" value="0">
+                        <input class="form-check-input" type="radio" name="options4" id="radio8" value="0" required>
                         <label class="form-check-label" for="radio8">Tidak</label>
                         </div>
                       </div>
@@ -78,11 +78,11 @@
                       <label class="form-label">Menciptakan ruangan yang bersih di ruang rawat</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio9" value="1">
+                        <input class="form-check-input" type="radio" name="options5" id="radio9" value="1" required>
                         <label class="form-check-label" for="radio9">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio10" value="0">
+                        <input class="form-check-input" type="radio" name="options5" id="radio10" value="0" required>
                         <label class="form-check-label" for="radio10">Tidak</label>
                         </div>
                       </div>

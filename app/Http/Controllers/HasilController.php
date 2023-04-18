@@ -2,7 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\pengukuran;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 class HasilController extends Controller
 {
@@ -13,8 +16,11 @@ class HasilController extends Controller
      */
     public function index()
     {
+        $dataPengukuran = DB::table('pengukurans')->get()->where('id_user', Auth::user()->id)->whereNotNull('kategori_nilai');
+        // dd($dataPengukuran);
         return view('hasil', [
-            "title" => "Hasil Pengukuran"
+            "title" => "Hasil Pengukuran",
+            "datas" => $dataPengukuran
         ]);
     }
 
