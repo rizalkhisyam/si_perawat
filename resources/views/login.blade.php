@@ -55,7 +55,7 @@
                   <div class="container row">
                     <div class="col-lg-12 d-flex justify-content-center align-items-center">
                       <img src="{{ asset('img/logo_si.png') }}" class="navbar-brand-img h-100" alt="main_logo">
-                      <span class="ms-1 font-weight-bold text-white">Si Keperawatan</span>
+                      <span class="ms-1 font-weight-bold text-white">E - Kode Etik Perawat</span>
                     </div>
                   </div>
                   <!-- <h4 class="text-white font-weight-bolder text-center mt-2 mb-0">Sign in</h4> -->
