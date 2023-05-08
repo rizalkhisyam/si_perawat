@@ -2,8 +2,22 @@
 
 @section('content')
     <div class="row" >
+        <div class="col-12">
+            <div class="card my-4">
+                <div class="card-header pb-0 p-3">
+                        <div class="row">
+                            <div class="col-6 d-flex align-items-center">
+                            <h3 class="mb-0">Selamat Datang di E - Kode Etik Perawat</h3>
+                            </div>
+                        </div>
+                    </div>
+                <div class="card-body px-0 pb-2">
+                
+                </div>
+            </div>
+        </div>
 
-        <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
+        <!-- <div class="col-xl-3 col-sm-6 mb-xl-0 mb-4">
             <div class="card">
                 <div class="card-header p-3 pt-2">
                     <div class="icon icon-lg icon-shape bg-gradient-primary shadow-primary text-center border-radius-xl mt-n4 position-absolute">
@@ -16,7 +30,6 @@
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3">
-                    <!-- <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p> -->
                 </div>
             </div>
         </div>
@@ -34,10 +47,9 @@
                 </div>
                 <hr class="dark horizontal my-0">
                 <div class="card-footer p-3">
-                    <!-- <p class="mb-0"><span class="text-success text-sm font-weight-bolder">+3% </span>than last month</p> -->
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
 @endsection

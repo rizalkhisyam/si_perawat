@@ -179,18 +179,18 @@
                   @csrf
                     <span>Nama Perawat</span>
                     <div class="input-group input-group-outline mb-3">
-                      <input type="text" class="form-control" name="nama" id="nama">
+                      <input type="text" class="form-control" name="nama" id="nama" required>
                     </div>
 
                     <span>Usia (Tahun)</span>
                     <div class="input-group input-group-outline mb-3">
-                      <input type="number" class="form-control" name="usia" id="usia">
+                      <input type="number" class="form-control" name="usia" id="usia" required>
                       <span class="input-group-text" id="inputGroup-sizing-default"></span>
                     </div>
 
                     <span>Jenis Kelamin</span>
                     <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="jenis_kelamin" id="jenis_kelamin">
+                      <select class="form-control" aria-label="Default select example" name="jenis_kelamin" id="jenis_kelamin" required>
                         <option selected>-- Pilih salah satu --</option>
                         <option value="Pria">Pria</option>
                         <option value="Wanita">Wanita</option>
@@ -199,7 +199,7 @@
 
                     <span>Status Pendidikan</span>
                     <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan">
+                      <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan" required>
                         <option selected>-- Pilih salah satu --</option>
                         <option value="Strata Satu">Strata Satu</option>
                         <option value="Magister">Magister</option>
@@ -210,7 +210,7 @@
 
                     <span>Status Kepegawaian</span>
                     <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="status" id="status">
+                      <select class="form-control" aria-label="Default select example" name="status" id="status" required>
                         <option selected>-- Pilih salah satu --</option>
                         <option value="Pegawai Tetap">Pegawai Tetap</option>
                         <option value="Pegawai Kontrak">Pegawai Kontrak</option>
@@ -220,12 +220,12 @@
 
                     <span>Lama Bekerja, contoh: 5 bulan atau 1 tahun</span>
                     <div class="input-group input-group-outline mb-3">
-                      <input type="text" class="form-control" name="lama_bekerja" id="lama_bekerja">
+                      <input type="text" class="form-control" name="lama_bekerja" id="lama_bekerja" required>
                     </div>
 
                     <span>Jenjang Karir</span>
                     <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="jenjang_karir" id="jenjang_karir">
+                      <select class="form-control" aria-label="Default select example" name="jenjang_karir" id="jenjang_karir" required>
                         <option selected>-- Pilih salah satu --</option>
                         <option value="Perawat Pendidik">Perawat Pendidik</option>
                         <option value="Perawat Klinis">Perawat Klinis</option>
