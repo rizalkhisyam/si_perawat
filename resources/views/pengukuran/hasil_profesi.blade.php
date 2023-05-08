@@ -24,16 +24,16 @@
                         <div class="d-flex flex-column">
                             <h6 class="mb-3 text-sm">Hasil Pengukuran Perawat dan Klien</h6>
                             <span class="mb-2 text-xs">Nilai yang diperoleh : <span class="text-dark font-weight-bold ms-sm-2">{{$data->skor_1}}</span></span>
-                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">22</span></span>
+                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">13</span></span>
                             <h6 class="mb-3 text-sm">Hasil Pengukuran Perawat dan Praktek</h6>
                             <span class="mb-2 text-xs">Nilai yang diperoleh : <span class="text-dark font-weight-bold ms-sm-2">{{$data->skor_2}}</span></span>
-                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">15</span></span>
+                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">16</span></span>
                             <h6 class="mb-3 text-sm">Hasil Pengukuran Perawat dan Masyarakat</h6>
                             <span class="mb-2 text-xs">Nilai yang diperoleh : <span class="text-dark font-weight-bold ms-sm-2">{{$data->skor_3}}</span></span>
-                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">5</span></span>
+                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">4</span></span>
                             <h6 class="mb-3 text-sm">Hasil Pengukuran Perawat dan Teman</h6>
                             <span class="mb-2 text-xs">Nilai yang diperoleh : <span class="text-dark font-weight-bold ms-sm-2">{{$data->skor_4}}</span></span>
-                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">9</span></span>
+                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">7</span></span>
                             <h6 class="mb-3 text-sm">Hasil Pengukuran Perawat dan Profesi</h6>
                             <span class="mb-2 text-xs">Nilai yang diperoleh : <span class="text-dark font-weight-bold ms-sm-2">{{$data->skor_5}}</span></span>
                             <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">11</span></span>
@@ -51,10 +51,10 @@
                         </li>
                     </ul>
                     <div class="text-center">
-                    <a class="btn btn-primary" href="/pengukuran-instrumen-profesi/{{$data->id}}" role="button">Hasil Pengukuran</a>
+                    <a class="btn btn-primary" href="/hasil-pengukuran"" role="button">Hasil Pengukuran</a>
                     </div>
                     <div class="text-center">
-                    <a class="btn btn-light"  role="button">Kembali Ke Halaman Utama</a>
+                    <a class="btn btn-light" href="/dashboard" role="button">Kembali Ke Halaman Utama</a>
                     </div>
                   </div>
                 </div>  

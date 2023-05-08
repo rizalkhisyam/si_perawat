@@ -6,6 +6,29 @@
           <div class="card my-4">
           <div class="card-header pb-0 p-3">
                   <div class="row">
+
+                  <div class="col-12">
+                      <a class="btn bg-gradient-light mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal" href="javascript:;">Kembali</a>
+                    </div>
+                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Notifikasi</h1>
+                              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Apakah anda yakin ingin kembali pada halaman utama ?</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tidak</button>
+                              <a type="button" class="btn btn-primary" href="/dashboard">Iya</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     <div class="col-12 d-flex align-items-center justify-content-center mb-2">
                       <h6 class="mb-0">Instrumen Pengukuran Standar Perilaku Kode Etik Keperawatan - Perawat dan Masyarakat</h6>
                     </div>
@@ -72,18 +95,6 @@
                         <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options4" id="radio8" value="0" required>
                         <label class="form-check-label" for="radio8">Tidak</label>
-                        </div>
-                      </div>
-
-                      <label class="form-label">Menciptakan ruangan yang bersih di ruang rawat</label>
-                      <div class="input-group input-group-outline mb-2">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio9" value="1" required>
-                        <label class="form-check-label" for="radio9">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio10" value="0" required>
-                        <label class="form-check-label" for="radio10">Tidak</label>
                         </div>
                       </div>
                     

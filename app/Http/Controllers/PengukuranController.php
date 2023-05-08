@@ -147,6 +147,7 @@ class PengukuranController extends Controller
         foreach ($data as $key => $value) {
             $skor += (int)$value;
         }
+        // dd($skor);
         $updateNilai = pengukuran::where('id', $id)->update(['skor_1' => $skor]);
         $dataPengukuran = pengukuran::find($id);
 
@@ -212,7 +213,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_5' => $skor5]);
         $dataPengukuran = pengukuran::find($id);
         $skorTotal = $dataPengukuran->skor_1+$dataPengukuran->skor_2+$dataPengukuran->skor_3+$dataPengukuran->skor_4+$dataPengukuran->skor_5;
-        $nilaiInterval = round(($skorTotal/62)*100);
+        $nilaiInterval = round(($skorTotal/51)*100);
         if($nilaiInterval <= 49){
             $nilai_perilaku = 'D';
             $nilai_kategori = 'Buruk';

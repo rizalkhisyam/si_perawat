@@ -6,6 +6,29 @@
           <div class="card my-4">
           <div class="card-header pb-0 p-3">
                   <div class="row">
+
+                  <div class="col-12">
+                      <a class="btn bg-gradient-light mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal" href="javascript:;">Kembali</a>
+                    </div>
+                    
+                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Notifikasi</h1>
+                              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+                            </div>
+                            <div class="modal-body">
+                                <p>Apakah anda yakin ingin kembali pada halaman utama ?</p>
+                            </div>
+                            <div class="modal-footer">
+                              <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tidak</button>
+                              <a type="button" class="btn btn-primary" href="/dashboard">Iya</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
                     <div class="col-12 d-flex align-items-center justify-content-center mb-5">
                       <h6 class="mb-0">Instrumen Pengukuran Standar Perilaku Kode Etik Keperawatan - Perawat dan Teman Sejawat</h6>
                     </div>
@@ -63,7 +86,7 @@
                         </div>
                       </div>
 
-                      <label class="form-label">Menghormati teman sejawat dan profesi lain</label>
+                      <label class="form-label">Perawat harus menyimpulkan hasil pertemuan dengan saling menghargai</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options4" id="radio7" value="1" required>
@@ -75,34 +98,34 @@
                         </div>
                       </div>
 
-                      <label class="form-label">Menciptakan lingkungan yang kondusif (keserasian suasana dan menciptakan privasi)</label>
-                      <div class="input-group input-group-outline mb-2">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio9" value="1" required>
-                        <label class="form-check-label" for="radio9">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio10" value="0" required>
-                        <label class="form-check-label" for="radio10">Tidak</label>
-                        </div>
-                      </div>
-
-                      <label class="form-label">Perawat	harus menyimpulkan hasil pertemuan	dengan saling menghargai</label>
-                      <div class="input-group input-group-outline mb-2">
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options6" id="radio11" value="1" required>
-                        <label class="form-check-label" for="radio11">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options6" id="radio12" value="0" required>
-                        <label class="form-check-label" for="radio12">Tidak</label>
-                        </div>
-                      </div>
-
                       <div class="col-12 mb-2 mt-5">
                         <span class="text-bold">2. Perawat bertindak melindungi klien dari tenaga kesehatan yang memberikan pelayanan kesehatan secara tidak kompeten, tidak etis dan ilegal</span>
                         </div>
                         <label class="form-label">Perawat wajib memberikan perlindungan pada klien</label>
+                        <div class="input-group input-group-outline mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="options5" id="radio9" value="1" required>
+                            <label class="form-check-label" for="radio9">Ya</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="options5" id="radio10" value="0" required>
+                            <label class="form-check-label" for="radio10">Tidak</label>
+                            </div>
+                        </div>
+
+                        <label class="form-label">Perawat harus memahami alur untuk menyampaikan masalah bila terjadi pelayanan	kesehatan yang tidak mengikuti kaidah etik</label>
+                        <div class="input-group input-group-outline mb-2">
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="options6" id="radio11" value="1" required>
+                            <label class="form-check-label" for="radio11">Ya</label>
+                            </div>
+                            <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="options6" id="radio12" value="0" required>
+                            <label class="form-check-label" for="radio12">Tidak</label>
+                            </div>
+                        </div>
+
+                        <label class="form-label">Pimpinan Perawat wajib melindungi anggotanya dalam membahas dan mengemuka-kan pendapat</label>
                         <div class="input-group input-group-outline mb-2">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="options7" id="radio13" value="1" required>
@@ -111,30 +134,6 @@
                             <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="options7" id="radio14" value="0" required>
                             <label class="form-check-label" for="radio14">Tidak</label>
-                            </div>
-                        </div>
-
-                        <label class="form-label">Perawat harus memahami alur untuk menyampaikan masalah bila terjadi pelayanan	kesehatan yang tidak mengikuti kaidah etik</label>
-                        <div class="input-group input-group-outline mb-2">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="options8" id="radio15" value="1" required>
-                            <label class="form-check-label" for="radio15">Ya</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="options8" id="radio16" value="0" required>
-                            <label class="form-check-label" for="radio16">Tidak</label>
-                            </div>
-                        </div>
-
-                        <label class="form-label">Pimpinan Perawat wajib melindungi anggotanya dalam membahas dan mengemuka-kan pendapat</label>
-                        <div class="input-group input-group-outline mb-2">
-                        <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="options9" id="radio17" value="1" required>
-                            <label class="form-check-label" for="radio17">Ya</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                            <input class="form-check-input" type="radio" name="options9" id="radio18" value="0" required>
-                            <label class="form-check-label" for="radio18">Tidak</label>
                             </div>
                         </div>
                     
