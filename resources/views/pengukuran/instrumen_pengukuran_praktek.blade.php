@@ -30,7 +30,7 @@
                       </div>
 
                     <div class="col-12 d-flex align-items-center justify-content-center mb-2">
-                      <h6 class="mb-0">Instrumen Pengukuran Standar Perilaku Kode Etik Keperawatan - Perawat dan Praktek</h6>
+                      <h6 class="mb-0">Instrumen Pengukuran Standar Perilaku Kode Etik Keperawatan - Perawat dan Praktik</h6>
                     </div>
                     <ul class="list-group mt-5">
                         <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">

@@ -65,17 +65,15 @@ class PengukuranController extends Controller
         $data_ruangan = explode('|', $request->id_ruangan);
 
         $checkData = pengukuran::updateOrCreate([
-            'id_perawat' => $request->id_perawat,
-            'id_ruangan' => $request->id_ruangan
-        ], [
             'nama' => $data_perawat[1],
-                'ruangan' => $data_ruangan[1],
-                'id_perawat' => $data_perawat[0],
-                'id_ruangan' => $data_ruangan[0],
-                'id_user' => Auth::user()->id
+            'ruangan' => $data_ruangan[1],
+            'id_perawat' => $data_perawat[0],
+            'id_ruangan' => $data_ruangan[0],
+            'id_user' => Auth::user()->id
         ]);
         $id_pengukuran = $checkData->id;
-
+        $request->session()->put('name', $data_perawat[1]);
+        dd($request->session()->get('name'));
         $data_perawat = Perawat::find($data_perawat[0]);
         return view('Pengukuran/Instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
@@ -150,7 +148,7 @@ class PengukuranController extends Controller
         // dd($skor);
         $updateNilai = pengukuran::where('id', $id)->update(['skor_1' => $skor]);
         $dataPengukuran = pengukuran::find($id);
-
+        
         return view('Pengukuran/Hasil_klien', [
             'title' => 'Hasil Pengukuran Perawat dan Klien',
             'data' => $dataPengukuran

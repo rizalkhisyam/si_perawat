@@ -140,7 +140,7 @@
                         <div class="col-12 mb-2 mt-5">
                         <span class="text-bold">3. Perawat berpartisipasi aktif dalam upaya profesi untuk membangun dan memelihara kondisi kerja yang kondusif demi terwujudnya asuhan keperawatan yang bermutu tinggi</span>
                         </div>
-                        <label class="form-label">Perawat ajib menjalankan tugas profesinya dengan penuh tanggung jawab</label>
+                        <label class="form-label">Perawat wajib menjalankan tugas profesinya dengan penuh tanggung jawab</label>
                         <div class="input-group input-group-outline mb-2">
                         <div class="form-check form-check-inline">
                             <input class="form-check-input" type="radio" name="options8" id="radio15" value="1" required>

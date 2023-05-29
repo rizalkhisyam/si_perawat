@@ -32,7 +32,7 @@
                     <a class="btn btn-primary" href="/pengukuran-instrumen-masyarakat/{{$data->id}}" role="button">Lanjutkan Pengukuran</a>
                     </div>
                     <div class="text-center">
-                    <a class="btn btn-light"  role="button">Kembali Ke Halaman Utama</a>
+                    <a class="btn btn-light" href="/dashboard"  role="button">Kembali Ke Halaman Utama</a>
                     </div>
                     
                   </div>

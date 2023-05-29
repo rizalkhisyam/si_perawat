@@ -52,7 +52,7 @@
                     <div class="col-12 mb-2">
                     <span class="text-bold">1. Perawat dalam memberikan pelayanan keperawatan menghargai harkat dan martabat manusia, keunikan klien, dan tidak terpengaruh oleh pertimbangan kebangsaan, kesukuan, warna kulit, umur, jenis kelamin, aliran politik dan agama yang dianut serta kedudukan sosial</span>
                     </div>
-                    <label class="form-label">Perawat wajib memperkenalkan diri kepada klien dan keluarganya pada setiap awal dan pamit pada akhir shift</label>
+                    <label class="form-label mt-2">Perawat wajib memperkenalkan diri kepada klien dan keluarganya pada setiap awal dan pamit pada akhir shift</label>
                       <div class="input-group input-group-outline mb-2">
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="options1" id="radio1" value="1" required>
@@ -63,8 +63,12 @@
                           <label class="form-check-label" for="radio2">Tidak</label>
                         </div>
                       </div>
-
-                      <label class="form-label">Perawat wajib menjelaskan setiap intervensi keperawatan yang dilakukan pada klien</label>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
+  
+                      <label class="form-label mt-4">Perawat wajib menjelaskan setiap intervensi keperawatan yang dilakukan pada klien</label>
                       <div class="input-group input-group-outline mb-2">
                         <div class="form-check form-check-inline">
                           <input class="form-check-input" type="radio" name="options2" id="radio3" value="1" required>
@@ -75,8 +79,12 @@
                         <label class="form-check-label" for="radio4">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
                     
-                      <label class="form-label">Perawat dalam memberikan pelayanan keperawatan dilarang mencela adat kebiasaan dan keadaan khusus klien</label>
+                      <label class="form-label mt-4">Perawat dalam memberikan pelayanan keperawatan dilarang mencela adat kebiasaan dan keadaan khusus klien</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options3" id="radio5" value="1" required>
@@ -87,8 +95,12 @@
                         <label class="form-check-label" for="radio6">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat	dalam memberikan pelayanan keperawatan dilarang membeda-bedakan pelayanan atas dasar kebangsaan, kesukuan, warna kulit, umur, jenis kelamin, aliran politik dan agama yang dianut serta kedudukan sosial pada klien</label>
+                      <label class="form-label mt-4">Perawat	dalam memberikan pelayanan keperawatan dilarang membeda-bedakan pelayanan atas dasar kebangsaan, kesukuan, warna kulit, umur, jenis kelamin, aliran politik dan agama yang dianut serta kedudukan sosial pada klien</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options4" id="radio7" value="1" required>
@@ -99,11 +111,15 @@
                         <label class="form-check-label" for="radio8">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
                     <div class="col-12 mb-2 mt-5">
                         <span class="text-bold">2. Perawat dalam memberikan pelayanan keperawatan senantiasa memelihara suasana lingkungan yang menghormati nilai-nilai budaya, adat istiadat dan kelangsungan hidup beragama</span>
                     </div>
-                    <label class="form-label">Perawat pada awal bertemu klien, wajib menjelaskan bahwa mereka boleh menjalankan kegiatan yang terkait dengan budaya, adat dan agama</label>
+                    <label class="form-label mt-4">Perawat pada awal bertemu klien, wajib menjelaskan bahwa mereka boleh menjalankan kegiatan yang terkait dengan budaya, adat dan agama</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options5" id="radio23" value="1" required>
@@ -114,8 +130,12 @@
                         <label class="form-check-label" for="radio24">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat	dalam memberikan pelayanan harus memelihara suasana lingkungan yang menghormati nilai-nilai budaya, adat istiadat dan kelangsungan hidup beragama dan wajib mencari solusi yang akan berpihak pada klien bila terjadi konflik terkait nilai- nilai budaya, adat istiadat	dan kelangsungan hidup beragama</label>
+                      <label class="form-label mt-4">Perawat	dalam memberikan pelayanan harus memelihara suasana lingkungan yang menghormati nilai-nilai budaya, adat istiadat dan kelangsungan hidup beragama dan wajib mencari solusi yang akan berpihak pada klien bila terjadi konflik terkait nilai- nilai budaya, adat istiadat	dan kelangsungan hidup beragama</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options6" id="radio25" value="1" required>
@@ -126,8 +146,12 @@
                         <label class="form-check-label" for="radio26">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat	wajib membantu	klien memenuhi kebutuhannya	pada intervensi keperawatan sesuai dengan budaya, adat istiadat dan agama</label>
+                      <label class="form-label mt-4">Perawat	wajib membantu	klien memenuhi kebutuhannya	pada intervensi keperawatan sesuai dengan budaya, adat istiadat dan agama</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options7" id="radio27" value="1" required>
@@ -138,8 +162,12 @@
                         <label class="form-check-label" for="radio28">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat	wajib mengikut sertakan klien secara terus menerus pada saat memberikan asuhan keperawatan</label>
+                      <label class="form-label mt-4">Perawat	wajib mengikut sertakan klien secara terus menerus pada saat memberikan asuhan keperawatan</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options8" id="radio29" value="1" required>
@@ -150,11 +178,15 @@
                         <label class="form-check-label" for="radio30">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
                     <div class="col-12 mb-2 mt-5">
                         <span class="text-bold">3. Tanggung jawab utama perawat adalah kepada mereka yang membutuhkan	asuhan keperawatan</span>
                     </div>
-                    <label class="form-label">Perawat dalam melaksanakan intervensi keperawatan wajib sesuai dengan kompetensi yang dimilikinya</label>
+                    <label class="form-label mt-4">Perawat dalam melaksanakan intervensi keperawatan wajib sesuai dengan kompetensi yang dimilikinya</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options9" id="radio31" value="1" required>
@@ -165,8 +197,12 @@
                         <label class="form-check-label" for="radio32">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat wajib melaksanakan asuhan keperawatan secara tuntas dan tepat waktu</label>
+                      <label class="form-label mt-4">Perawat wajib melaksanakan asuhan keperawatan secara tuntas dan tepat waktu</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options10" id="radio33" value="1" required>
@@ -177,8 +213,12 @@
                         <label class="form-check-label" for="radio34">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat dilarang melakukan serah terima bila tindakan keperawatan belum dilaksanakan sesuai dengan rencana yang telah dibuat, kecuali bila ada alasan yang dapat diterima</label>
+                      <label class="form-label mt-4">Perawat dilarang melakukan serah terima bila tindakan keperawatan belum dilaksanakan sesuai dengan rencana yang telah dibuat, kecuali bila ada alasan yang dapat diterima</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options11" id="radio35" value="1" required>
@@ -189,8 +229,12 @@
                         <label class="form-check-label" for="radio36">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat wajib membuat dokumentasi asuhan keperawatan sesuai dengan kaidah yang berlaku</label>
+                      <label class="form-label mt-4">Perawat wajib membuat dokumentasi asuhan keperawatan sesuai dengan kaidah yang berlaku</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options12" id="radio37" value="1" required>
@@ -201,11 +245,15 @@
                         <label class="form-check-label" for="radio38">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
+                      </div>
 
                     <div class="col-12 mb-2 mt-5">
                         <span class="text-bold">4. Perawat wajib merahasiakan segala sesuatu yang diketahui sehubungan dengan tugas yang dipercayakan kepadanya kecuali jika diperlukan oleh yang berwenang sesuai dengan ketentuan hukum yang berlaku</span>
                     </div>
-                    <label class="form-label">Perawat dilarang membocorkan rahasia tentang segala sesuatu yang diketahui sehubungan dengan tugas yang dipercayakan kepadanya kecuali jika diperlukan oleh yang berwenang sesuai dengan ketentuan hukum yang berlaku</label>
+                    <label class="form-label mt-4">Perawat dilarang membocorkan rahasia tentang segala sesuatu yang diketahui sehubungan dengan tugas yang dipercayakan kepadanya kecuali jika diperlukan oleh yang berwenang sesuai dengan ketentuan hukum yang berlaku</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options13" id="radio41" value="1" required>
@@ -215,6 +263,10 @@
                         <input class="form-check-input" type="radio" name="options13" id="radio42" value="0" required>
                         <label class="form-check-label" for="radio42">Tidak</label>
                         </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
                       </div>
                     
                       <div class="text-center">
