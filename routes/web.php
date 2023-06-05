@@ -36,6 +36,7 @@ Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard
 
 Route::get('perawat', [PerawatController::class, 'index'])->name('perawat')->middleware('auth');
 Route::get('perawat/edit/{id}', [PerawatController::class, 'edit'])->name('edit-perawat')->middleware('auth');
+Route::patch('update-perawat/{id}', [PerawatController::class, 'update'])->name('update-perawat')->middleware('auth');
 Route::delete('perawat/{id}', [PerawatController::class, 'destroy'])->name('delete-perawat')->middleware('auth');
 Route::post('perawat', [PerawatController::class, 'store'])->name('create-perawat')->middleware('auth');
 

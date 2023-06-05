@@ -13,7 +13,7 @@
                 </div>
             <div class="card-body px-0 pb-2 col-4">
                 <div class="container">
-                  <form role="form" action="">
+                  <form role="form" action="{{ route('update-perawat', $data->id) }}" method="POST">
                     @csrf
                     @method("PATCH")
                     <div class="mb-3">
@@ -72,7 +72,7 @@
                     </div>
 
                     <div class="text-center">
-                      <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Simpan</button>
+                      <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Perbarui Data</button>
                     </div>
                   </form>
                 </div>
@@ -80,83 +80,4 @@
           </div>
         </div>
       </div>
-
-      <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-dialog">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Perawat</h1>
-              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
-            </div>
-            <div class="modal-body">
-                <form role="form" action="{{ route('create-perawat') }}" method="POST">
-                  @csrf
-                    <span>Nama Perawat</span>
-                    <div class="input-group input-group-outline mb-3">
-                      <input type="text" class="form-control" name="nama" id="nama" required>
-                    </div>
-
-                    <span>Usia (Tahun)</span>
-                    <div class="input-group input-group-outline mb-3">
-                      <input type="number" class="form-control" name="usia" id="usia" required>
-                      <span class="input-group-text" id="inputGroup-sizing-default"></span>
-                    </div>
-
-                    <span>Jenis Kelamin</span>
-                    <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="jenis_kelamin" id="jenis_kelamin" required>
-                        <option selected>-- Pilih salah satu --</option>
-                        <option value="Pria">Pria</option>
-                        <option value="Wanita">Wanita</option>
-                      </select>
-                    </div>
-
-                    <span>Status Pendidikan</span>
-                    <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan" required>
-                        <option selected>-- Pilih salah satu --</option>
-                        <option value="Strata Satu">Strata Satu</option>
-                        <option value="Magister">Magister</option>
-                        <option value="Doctor">Doctor</option>
-                      </select>
-                    </div>
-
-                    <span>Status Kepegawaian</span>
-                    <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="status" id="status" required>
-                        <option selected>-- Pilih salah satu --</option>
-                        <option value="Pegawai Tetap">Pegawai Tetap</option>
-                        <option value="Pegawai Kontrak">Pegawai Kontrak</option>
-                        <option value="Magang">Magang</option>
-                      </select>
-                    </div>
-
-                    <span>Lama Bekerja, contoh: 5 bulan atau 1 tahun</span>
-                    <div class="input-group input-group-outline mb-3">
-                      <input type="text" class="form-control" name="lama_bekerja" id="lama_bekerja" required>
-                    </div>
-
-                    <span>Jenjang Karir</span>
-                    <div class="input-group input-group-outline mb-3">
-                      <select class="form-control" aria-label="Default select example" name="jenjang_karir" id="jenjang_karir" required>
-                        <option selected>-- Pilih salah satu --</option>
-                        <option value="Perawat Pendidik">Perawat Pendidik</option>
-                        <option value="Perawat Klinis">Perawat Klinis</option>
-                        <option value="Perawat Manajer">Perawat Manajer</option>
-                        <option value="Perawat Peneliti/riset">Perawat Peneliti/riset</option>
-                      </select>
-                    </div>
-
-                    <div class="modal-footer">
-                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
-                      <button type="submit" class="btn btn-primary">Simpan</button>
-                    </div>
-                </form>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      
-
 @endsection

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Perawat;
 use App\Http\Requests\StorePerawatRequest;
 use App\Http\Requests\UpdatePerawatRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 
 class PerawatController extends Controller
@@ -87,9 +88,10 @@ class PerawatController extends Controller
      * @param  \App\Models\Perawat  $perawat
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdatePerawatRequest $request, Perawat $perawat)
+    public function update(Request $request, $id)
     {
-        //
+        dd($request);
+        $update = Perawat::where('id', $id)->update($request);
     }
 
     /**
