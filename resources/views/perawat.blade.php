@@ -36,7 +36,7 @@
                           </div> -->
                           <div class="d-flex flex-column justify-content-center">
                             <h6 class="mb-0 text-sm">{{$data->nama}} - {{$data->id}}</h6>
-                            <p class="text-xs text-secondary mb-0">{{$data->jenis_kelamin}}</p>
+                            <p class="text-xs text-secondary mb-0">{{$data->jenis_kelamin == 'pria' ? 'Laki-laki' : 'Perempuan'}} - {{$data->usia}} Tahun</p>
                           </div>
                         </div>
                       </td>
@@ -52,7 +52,8 @@
                       </td>
                       <td class="align-middle">
                       <div class="ms-auto d-flex justify-content-center">
-                        <button class="btn btn-link text-dark px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="material-icons text-sm me-2">edit</i>Edit</button>
+                        <!-- <button class="btn btn-link text-dark px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="material-icons text-sm me-2">edit</i>Edit</button> -->
+                        <a class="btn btn-link text-dark px-3 mb-0" href="/perawat/edit/{{$data->id}}" ><i class="material-icons text-sm me-2">edit</i>Edit</a>
 
                         <div class="modal fade" id="modalEdit" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                         <div class="modal-dialog">

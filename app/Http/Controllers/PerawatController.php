@@ -71,9 +71,13 @@ class PerawatController extends Controller
      * @param  \App\Models\Perawat  $perawat
      * @return \Illuminate\Http\Response
      */
-    public function edit(Perawat $perawat)
+    public function edit($id)
     {
-        //
+        $data_perawat = Perawat::find($id);
+        return view('edit/edit_perawat', [
+            "title" => "Edit Perawat",
+            "data" => $data_perawat
+        ]);
     }
 
     /**

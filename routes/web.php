@@ -35,6 +35,7 @@ Route::post('/register', [RegisterController::class, 'store'])->name('register')
 Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard')->middleware('auth');
 
 Route::get('perawat', [PerawatController::class, 'index'])->name('perawat')->middleware('auth');
+Route::get('perawat/edit/{id}', [PerawatController::class, 'edit'])->name('edit-perawat')->middleware('auth');
 Route::delete('perawat/{id}', [PerawatController::class, 'destroy'])->name('delete-perawat')->middleware('auth');
 Route::post('perawat', [PerawatController::class, 'store'])->name('create-perawat')->middleware('auth');
 
