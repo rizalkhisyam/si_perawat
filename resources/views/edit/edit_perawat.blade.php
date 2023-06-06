@@ -32,7 +32,7 @@
                       <label class="form-label">Status Kepegawaian</label>
                       <div class="input-group input-group-outline ">
                         <select class="form-control" aria-label="Default select example" name="status" id="status">
-                        <option value="{{$data->status}}" selected disabled hidden>{{$data->status}}</option>
+                          <option value="{{$data->status}}" selected hidden>{{$data->status}}</option>
                           <option value="Pegawai Tetap">Pegawai Tetap</option>
                           <option value="Pegawai Kontrak">Pegawai Kontrak</option>
                           <option value="Magang">Magang</option>
@@ -43,7 +43,7 @@
                       <label class="form-label">Jenjang Karir</label>
                       <div class="input-group input-group-outline ">
                         <select class="form-control" aria-label="Default select example" name="jenjang_karir" id="jenjang_karir">
-                        <option value="{{$data->jenjang_karir}}" selected disabled hidden>{{$data->jenjang_karir}}</option>
+                          <option value="{{$data->jenjang_karir}}" selected hidden>{{$data->jenjang_karir}}</option>
                           <option value="Perawat Pendidik">Perawat Pendidik</option>
                           <option value="Perawat Klinis">Perawat Klinis</option>
                           <option value="Perawat Manajer">Perawat Manajer</option>
@@ -56,7 +56,7 @@
                       <label class="form-label">Status Pendidikan</label>
                       <div class="input-group input-group-outline ">
                         <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan">
-                        <option value="{{$data->status_pendidikan}}" selected disabled hidden>{{$data->status_pendidikan}}</option>
+                          <option value="{{$data->status_pendidikan}}" selected hidden>{{$data->status_pendidikan}}</option>
                           <option value="Strata Satu">Strata Satu</option>
                           <option value="Magister">Magister</option>
                           <option value="Doctor">Doctor</option>

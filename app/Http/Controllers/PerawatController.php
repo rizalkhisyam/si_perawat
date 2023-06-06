@@ -90,8 +90,21 @@ class PerawatController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd($request);
-        $update = Perawat::where('id', $id)->update($request);
+        // dd($request);
+        $update = Perawat::where('id', $id)->update([
+            'nama' => $request->nama,
+            'usia' => $request->usia,
+            'status' => $request->status,
+            'jenjang_karir' => $request->jenjang_karir,
+            'status_pendidikan' => $request->status_pendidikan,
+            'lama_bekerja' => $request->lama_bekerja
+        ]);
+
+        $data_perawat = Perawat::all();
+        return view('perawat', [
+            "title" => "Perawat",
+            "datas" => $data_perawat
+        ]);
     }
 
     /**
