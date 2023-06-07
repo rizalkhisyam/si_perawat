@@ -13,19 +13,13 @@
                 </div>
             <div class="card-body px-0 pb-2 col-4">
                 <div class="container">
-                  <form role="form" action="{{ route('update-perawat', $data->id) }}" method="POST">
+                  <form role="form" action="{{ route('update-ruangan', $data->id) }}" method="POST">
                     @csrf
                     @method("PATCH")
                     <div class="mb-3">
                       <label class="form-label">Nama Ruangan</label>
                       <div class="input-group input-group-outline ">
-                        <input type="text" class="form-control" name="nama" required value="{{$data->nama}}">
-                      </div>
-                    </div>
-                    <div class="mb-3">
-                      <label class="form-label">Umur (Tahun)</label>
-                      <div class="input-group input-group-outline ">
-                        <input type="text" class="form-control" name="usia" required value="{{$data->usia}}">
+                        <input type="text" class="form-control" name="nama_ruangan" required value="{{$data->nama_ruangan}}">
                       </div>
                     </div>
                       

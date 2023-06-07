@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Ruangan;
 use App\Http\Requests\StoreRuanganRequest;
 use App\Http\Requests\UpdateRuanganRequest;
+use Illuminate\Http\Request;
 
 class RuanganController extends Controller
 {
@@ -66,9 +67,13 @@ class RuanganController extends Controller
      * @param  \App\Models\Ruangan  $ruangan
      * @return \Illuminate\Http\Response
      */
-    public function edit(Ruangan $ruangan)
+    public function edit($id)
     {
-        //
+        $ruangan = Ruangan::find($id);
+        return view('edit/edit_ruangan', [
+            'title' => 'Edit Ruangan',
+            'data' => $ruangan
+        ]);
     }
 
     /**
@@ -78,9 +83,14 @@ class RuanganController extends Controller
      * @param  \App\Models\Ruangan  $ruangan
      * @return \Illuminate\Http\Response
      */
-    public function update(UpdateRuanganRequest $request, Ruangan $ruangan)
+    public function update(Request $request, $id)
     {
-        //
+        Ruangan::where('id', $id)->update(['nama_ruangan' => $request->nama_ruangan]);
+        $data_ruangan = Ruangan::all();
+        return view('ruangan', [
+            "title" => "Ruangan",
+            "datas" => $data_ruangan
+        ]);
     }
 
     /**

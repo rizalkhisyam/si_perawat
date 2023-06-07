@@ -17,7 +17,7 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Edit Data Perawat</h1>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Ruangan</h1>
                               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
                             </div>
                             <div class="modal-body">
@@ -90,7 +90,7 @@
                         <span class="badge badge-sm bg-gradient-success">{{$data->daya_tampung}}</span>
                       </td>
                       <td class="align-middle">
-                        <a href="javascript:;" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
+                        <a href="/edit-ruangan/{{$data->id}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
                           Edit
                         </a>
                       </td>

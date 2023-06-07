@@ -41,8 +41,9 @@ Route::delete('perawat/{id}', [PerawatController::class, 'destroy'])->name('dele
 Route::post('perawat', [PerawatController::class, 'store'])->name('create-perawat')->middleware('auth');
 
 Route::get('/ruangan', [RuanganController::class, 'index'])->name('ruangan')->middleware('auth');
-Route::post('/ruangan', [RuanganController::class, 'store'])->name('simpan-data-ruangan')->middleware(('auth'));
-
+Route::get('/edit-ruangan/{id}', [RuanganController::class, 'edit'])->name('edit-ruangan')->middleware('auth');
+Route::post('/ruangan', [RuanganController::class, 'store'])->name('simpan-data-ruangan')->middleware('auth');
+Route::patch('/update-ruangan/{id}', [RuanganController::class, 'update'])->name('update-ruangan')->middleware('auth');
 Route::get('/pengukuran', [PengukuranController::class, 'index'])->name('pengukuran')->middleware('auth');
 
 Route::post('/pengukuran-1', [PengukuranController::class, 'pengukuran1'])->name('pengukuran-1')->middleware('auth');
