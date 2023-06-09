@@ -132,9 +132,9 @@
                         </div>
                       </div>
 
-                        <button class="btn btn-link text-danger text-gradient px-3 mb-0" data-bs-toggle="modal" data-bs-target="#@('modelDelete'+{{$data->id}})"><i class="material-icons text-sm me-2">delete</i>Delete</button>
+                        <a class="btn btn-link text-danger text-gradient px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalDelete{{$data->id}}"><i class="material-icons text-sm me-2">delete</i>Delete</a>
                         
-                        <div class="modal fade" id="@('modelDelete'+{{$data->id}})" tabindex="-1" aria-labelledby="{{$data->id}}" aria-hidden="true">
+                        <div class="modal fade" id="modalDelete{{$data->id}}" tabindex="" aria-labelledby="{{$data->id}}" aria-hidden="true">
                           <div class="modal-dialog">
                             <div class="modal-content">
                               <div class="modal-header">
@@ -243,7 +243,4 @@
           </div>
         </div>
       </div>
-
-      
-
 @endsection

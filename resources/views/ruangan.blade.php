@@ -89,10 +89,8 @@
                       <td class="align-middle text-center text-sm">
                         <span class="badge badge-sm bg-gradient-success">{{$data->daya_tampung}}</span>
                       </td>
-                      <td class="align-middle">
-                        <a href="/edit-ruangan/{{$data->id}}" class="text-secondary font-weight-bold text-xs" data-toggle="tooltip" data-original-title="Edit user">
-                          Edit
-                        </a>
+                      <td class="align-right">
+                      <a class="btn btn-link text-dark px-3 mb-0" href="/edit-ruangan/{{$data->id}}" ><i class="material-icons text-sm me-2">edit</i>Edit</a>
                       </td>
                     </tr>
                     @endforeach
@@ -102,7 +100,5 @@
             </div>
           </div>
         </div>
-
-        
       </div>
 @endsection
