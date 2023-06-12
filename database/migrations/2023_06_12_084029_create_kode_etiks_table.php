@@ -15,8 +15,8 @@ class CreateKodeEtiksTable extends Migration
     {
         Schema::create('kode_etiks', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_category')->unsigned();
-            $table->foreign('id_category')->references('id')->on('categorys');
+            $table->bigInteger('id_categories')->unsigned();
+            $table->foreign('id_categories')->references('id')->on('categories');
             $table->text('pernyataan');
             $table->timestamps();
         });

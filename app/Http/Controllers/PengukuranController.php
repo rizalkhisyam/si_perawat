@@ -30,6 +30,13 @@ class PengukuranController extends Controller
         ]);
     }
 
+    public function index_v2()
+    {
+        return view('Pengukuran/pengukuran_instrumen_klien', [
+            'title' => 'Pengukuran Klien'
+        ]);
+    }
+
     public function klien(){
         $perawats = Perawat::all();
         $ruangans = Ruangan::all();
