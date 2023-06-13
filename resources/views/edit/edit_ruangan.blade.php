@@ -11,7 +11,7 @@
                     </div>
                   </div>
                 </div>
-            <div class="card-body px-0 pb-2 col-4">
+            <div class="card-body px-0 pb-2 col-12 col-lg-4">
                 <div class="container">
                   <form role="form" action="{{ route('update-ruangan', $data->id) }}" method="POST">
                     @csrf

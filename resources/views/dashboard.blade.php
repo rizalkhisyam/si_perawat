@@ -6,7 +6,7 @@
             <div class="card my-4">
                 <div class="card-header pb-0 p-3">
                         <div class="row">
-                            <div class="col-6 d-flex align-items-center">
+                            <div class="col-12 d-flex align-items-center">
                             <h3 class="mb-0">Selamat Datang di E - Kode Etik Perawat</h3>
                             </div>
                         </div>

@@ -80,7 +80,7 @@ class PengukuranController extends Controller
         ]);
         $id_pengukuran = $checkData->id;
         $request->session()->put('name', $data_perawat[1]);
-        dd($request->session()->get('name'));
+        // dd($request->session()->get('name'));
         $data_perawat = Perawat::find($data_perawat[0]);
         return view('Pengukuran/Instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
