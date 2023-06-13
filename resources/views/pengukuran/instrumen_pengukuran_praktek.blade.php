@@ -48,10 +48,11 @@
                     <form role="form" class="" action="{{ route('hasil-pengukuran-2', $id_pengukuran) }}" method="POST">
                     @csrf
                     <div class="col-12 mb-2">
-                    <span class="text-bold">1. Perawat memelihara dan meningkatkan kompetensi	dibidang keperawatan melalui belajar terus menerus</span>
+                    <h6 class="">1. Perawat memelihara dan meningkatkan kompetensi	dibidang keperawatan melalui belajar terus menerus</h6>
                     </div>
                     <label class="form-label">Perawat harus berusaha untuk meningkatkan ilmu dan keterampilan sesuai dengan kemampuan</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">a. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options1" id="radio1" value="1" required>
                         <label class="form-check-label" for="radio1">Ya</label>
@@ -61,9 +62,14 @@
                         <label class="form-check-label" for="radio2">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment1"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat	harus mengamalkan ilmu dan keterampilan	yang dimiliki</label>
+                      <label class="form-label mt-4">Perawat melakukan praktik keperawatan berdasarkan praktik etik, legal dan peka budaya</label>
                       <div class="input-group input-group-outline mb-2">
+                      <label for="">b. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options2" id="radio3" value="1" required>
                         <label class="form-check-label" for="radio3">Ya</label>
@@ -73,9 +79,14 @@
                         <label class="form-check-label" for="radio4">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment2"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat harus mempublikasi-kan ilmu dan keterampilan yang dimiliki baik dalam bentuk hasil penelitian maupun presentasi kasus</label>
+                      <label class="form-label mt-4">Perawat	harus mengamalkan ilmu dan keterampilan	yang dimiliki</label>
                       <div class="input-group input-group-outline mb-2">
+                      <label for="">c. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options3" id="radio5" value="1" required>
                         <label class="form-check-label" for="radio5">Ya</label>
@@ -85,12 +96,14 @@
                         <label class="form-check-label" for="radio6">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment3"></textarea>
+                      </div>
 
-                    <div class="col-12 mb-2 mt-5">
-                        <span class="text-bold">2. Perawat senantiasa memelihara mutu pelayanan keperawatan yang tinggi disertai kejujuran profesional yang menerapkan pengetahuan serta keterampilan keperawatan sesuai dengan kebutuhan klien</span>
-                    </div>
-                    <label class="form-label">Perawat wajib memelihara mutu pelayanan keperawatan seoptimal mungkin dengan	mengikuti seminar/pelatihan/ workshop</label>
+                      <label class="form-label mt-4">Perawat harus mempublikasi-kan ilmu dan keterampilan yang dimiliki baik dalam bentuk hasil penelitian maupun presentasi kasus</label>
                       <div class="input-group input-group-outline mb-2">
+                      <label for="">d. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options4" id="radio7" value="1" required>
                         <label class="form-check-label" for="radio7">Ya</label>
@@ -100,9 +113,17 @@
                         <label class="form-check-label" for="radio8">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment4"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat	sebelum menerapkan pengetahuan dan keterampilan yang baru, wajib dievaluasi oleh perawat yang telah berkompeten</label>
+                    <div class="col-12 mb-2 mt-5">
+                        <h6 class="">2. Perawat senantiasa memelihara mutu pelayanan keperawatan yang tinggi disertai kejujuran profesional yang menerapkan pengetahuan serta keterampilan keperawatan sesuai dengan kebutuhan klien</h6>
+                    </div>
+                    <label class="form-label">Perawat wajib memelihara mutu pelayanan keperawatan seoptimal mungkin dengan	mengikuti seminar/pelatihan/ workshop</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">a. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options5" id="radio9" value="1" required>
                         <label class="form-check-label" for="radio9">Ya</label>
@@ -112,9 +133,14 @@
                         <label class="form-check-label" for="radio10">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment5"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat dalam memberikan asuhan keperawatan	wajib mengidentifikasi asuhan keperawatan yang tidak sesuai dengan nilai-nilai profesi keperawatan</label>
+                      <label class="form-label mt-4">Perawat	sebelum menerapkan pengetahuan dan keterampilan yang baru, wajib dievaluasi oleh perawat yang telah berkompeten</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">b. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options6" id="radio11" value="1" required>
                         <label class="form-check-label" for="radio11">Ya</label>
@@ -124,9 +150,14 @@
                         <label class="form-check-label" for="radio12">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment6"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat wajib menyampaikan kepada pimpinan,	apabila menemukan pelayanan kesehatan yang tidak sesuai dengan nilai-nilai yang dianut untuk selanjutnya ditindaklanjuti</label>
+                      <label class="form-label mt-4">Perawat dalam memberikan asuhan keperawatan	wajib mengidentifikasi asuhan keperawatan yang tidak sesuai dengan nilai-nilai profesi keperawatan: estetika, nilai persamaan, altruisme, kebebasan, martabat manusia, keadilan dan kebenaran.</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">c. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options7" id="radio13" value="1" required>
                         <label class="form-check-label" for="radio13">Ya</label>
@@ -136,9 +167,14 @@
                         <label class="form-check-label" for="radio14">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment7"></textarea>
+                      </div>
 
-                    <label class="form-label">Perawat dalam memberikan intervensi keperawatan wajib merujuk pada standar yang dikeluarkan institusi pelayanan kesehatan</label>
+                      <label class="form-label mt-4">Perawat wajib menyampaikan kepada pimpinan, apabila menemukan pelayanan kesehatan yang tidak sesuai dengan nilai-nilai yang dianut atau tidak sesuai dengan standar mutu dan keselamatan untuk selanjutnya ditindak-lanjuti</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">d. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options8" id="radio15" value="1" required>
                         <label class="form-check-label" for="radio15">Ya</label>
@@ -148,9 +184,14 @@
                         <label class="form-check-label" for="radio16">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment8"></textarea>
+                      </div>
 
-                      <label class="form-label">Setiap teknologi keperawatan yang digunakan wajib diuji validitas (kehandalan) dan reliabilitas (keabsahan) oleh lembaga yang berwenang</label>
+                    <label class="form-label mt-4">Perawat dalam memberikan intervensi keperawatan wajib merujuk pada standar yang dikeluarkan institusi pelayanan kesehatan</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">e. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options9" id="radio17" value="1" required>
                         <label class="form-check-label" for="radio17">Ya</label>
@@ -160,12 +201,14 @@
                         <label class="form-check-label" for="radio18">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment9"></textarea>
+                      </div>
 
-                    <div class="col-12 mb-2 mt-5">
-                        <span class="text-bold">3. Perawat dalam membuat keputusan didasarkan pada informasi yang akurat	dan mempertimbangkan kemampuan serta kualifikasi seseorang bila melakukan konsultasi, menerima delegasi dan memberikan	delegasi kepada orang lain</span>
-                    </div>
-                    <label class="form-label">Perawat dalam membuat keputusan wajib didasarkan pada informasi yang akurat</label>
+                      <label class="form-label mt-4">Setiap teknologi keperawatan yang digunakan wajib diuji validitas (kehandalan) dan reliabilitas (keabsahan) oleh lembaga yang berwenang</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">f. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options10" id="radio19" value="1" required>
                         <label class="form-check-label" for="radio19">Ya</label>
@@ -175,9 +218,17 @@
                         <label class="form-check-label" for="radio20">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment10"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat dalam membuat keputusan	wajib mempertimbangkan kemampuan serta kualifikasi seseorang bila melakukan	konsultasi, menerima delegasi dan memberikan delegasi kepada orang lain</label>
+                    <div class="col-12 mb-2 mt-5">
+                        <h6 class="">3. Perawat dalam membuat keputusan didasarkan pada informasi yang akurat	dan mempertimbangkan kemampuan serta kualifikasi seseorang bila melakukan konsultasi, menerima delegasi dan memberikan	delegasi kepada orang lain</h6>
+                    </div>
+                    <label class="form-label">Perawat dalam membuat keputusan wajib didasarkan pada informasi yang akurat baik dari pasien maupun keluarga pasien</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">a. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options11" id="radio21" value="1" required>
                         <label class="form-check-label" for="radio21">Ya</label>
@@ -187,12 +238,14 @@
                         <label class="form-check-label" for="radio22">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment11"></textarea>
+                      </div>
 
-                      <div class="col-12 mb-2 mt-5">
-                        <span class="text-bold">4. Perawat senantiasa menjunjung tinggi nama baik	profesi keperawatan dengan selalu menunjukkan perilaku profesional</span>
-                    </div>
-                    <label class="form-label">Perawat dilarang menyampaikan hal-hal yang terkait dengan kegiatan profesi keperawatan, kecuali ditugaskan oleh pejabat yang berwenang</label>
+                      <label class="form-label mt-4">Perawat memberikan delegasi kepada perawat profesi atau perawat vokasi sesuai dengan kompetensi yang diperlukan</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">b. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options12" id="radio23" value="1" required>
                         <label class="form-check-label" for="radio23">Ya</label>
@@ -202,9 +255,14 @@
                         <label class="form-check-label" for="radio24">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment12"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat wajib menyelesaikan permasalahan terkait pelaksanaan tugas profesi keperawatan	secara internal terlebih dahulu</label>
+                      <label class="form-label mt-4">Perawat menjalankan tugas sesuai yang didelegasikan dan membuat laporan terkait</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">c. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options13" id="radio25" value="1" required>
                         <label class="form-check-label" for="radio25">Ya</label>
@@ -214,9 +272,14 @@
                         <label class="form-check-label" for="radio26">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment13"></textarea>
+                      </div>
 
-                      <label class="form-label">Penyelesaian masalah harus dipimpin oleh perawat penanggung jawab</label>
+                      <label class="form-label mt-4">Perawat	dalam membuat keputusan atau memberi masukan wajib mempertimbangkan kemampuan serta kualifikasi seseorang (penerima konsul) bila melakukan konsultasi.</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">d. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options14" id="radio27" value="1" required>
                         <label class="form-check-label" for="radio27">Ya</label>
@@ -226,21 +289,34 @@
                         <label class="form-check-label" for="radio28">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment14"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat harus menjaga kesehatan jasmani dan rohani yang diperlukan untuk menampilkan sikap profesinya</label>
+                      <div class="col-12 mb-2 mt-5">
+                        <h6 class="">4. Perawat senantiasa menjunjung tinggi nama baik	profesi keperawatan dengan selalu menunjukkan perilaku profesional</h6>
+                    </div>
+                    <label class="form-label mt-4">Perawat	dilarang menyampaikan hal-hal yang terkait dengan kegiatan profesi keperawatan (asuhan keperawatan), kecuali ditugaskan oleh pejabat yang berwenang</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">a. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options15" id="radio29" value="1" required>
                         <label class="form-check-label" for="radio29">Ya</label>
                         </div>
                         <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options15" id="radio30" value="0"required>
+                        <input class="form-check-input" type="radio" name="options15" id="radio30" value="0" required>
                         <label class="form-check-label" for="radio30">Tidak</label>
                         </div>
                       </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment15"></textarea>
+                      </div>
 
-                      <label class="form-label">Perawat yang dalam keadaan tidak sehat dilarang memberikan asuhan keperawatan.</label>
+                      <label class="form-label mt-4">Perawat wajib menyelesaikan permasalahan terkait pelaksanaan tugas profesi keperawatan	secara internal terlebih dahulu</label>
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">b. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options16" id="radio31" value="1" required>
                         <label class="form-check-label" for="radio31">Ya</label>
@@ -249,6 +325,84 @@
                         <input class="form-check-input" type="radio" name="options16" id="radio32" value="0" required>
                         <label class="form-check-label" for="radio32">Tidak</label>
                         </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment16"></textarea>
+                      </div>
+
+                      <label class="form-label mt-4">Penyelesaian masalah harus dipimpin oleh perawat penanggung jawab</label>
+                      <div class="input-group input-group-outline mb-2">
+                        <label for="">c. </label>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options17" id="radio33" value="1" required>
+                        <label class="form-check-label" for="radio33">Ya</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options17" id="radio34" value="0" required>
+                        <label class="form-check-label" for="radio34">Tidak</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment17"></textarea>
+                      </div>
+
+                      <label class="form-label mt-4">Perawat harus menjaga kesehatan jasmani dan rohani yang diperlukan untuk menampilkan sikap profesinya: jika tidak sehat dilarang memberikan	asuhan keperawatan</label>
+                      <div class="input-group input-group-outline mb-2">
+                        <label for="">d. </label>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options18" id="radio35" value="1" required>
+                        <label class="form-check-label" for="radio35">Ya</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options18" id="radio36" value="0"required>
+                        <label class="form-check-label" for="radio36">Tidak</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment18"></textarea>
+                      </div>
+
+                      <label class="form-label mt-4">Memberikan informasi yang lengkap, jujur, benar dan mudah dimengerti mengenai intervensi keperawatan kepada klien dan keluarga sesuai batas kewenangannya, bersikap ramah dan menepati janji.</label>
+                      <div class="input-group input-group-outline mb-2">
+                        <label for="">e. </label>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options19" id="radio37" value="1" required>
+                        <label class="form-check-label" for="radio37">Ya</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options19" id="radio38" value="0" required>
+                        <label class="form-check-label" for="radio38">Tidak</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment19"></textarea>
+                      </div>
+
+                      <label class="form-label">MemberDalam memberikan asuhan keperawatan, perawat wajib menjaga penampilan:</label><br>
+                      <label class="form-label">a. Menggunakan seragam dinas sesuai ketentuan, bersih dan rapi</label><br>
+                      <label class="form-label">b. Menggunakan sepatu hitam dan kaus kaki</label><br>
+                      <label class="form-label">c. Riasan (make up) dan aksesoris tidak berlebihan</label><br>
+                      <label class="form-label">d. Menggunakan tanda pengenal (ID Card) saat berdinas</label><br>
+                      <label class="form-label">e. Tidak bau badan dan penggunaan parfum tidak berlebihan</label><br>
+                      <label class="form-label">f. Laki-laki: rambut rapi tidak menutupi telinga dan kerah baju, tidak dikuncir dan jika berjenggot tampak rapi. Perempuan : rambut diikat menggunakan cepol/hairnet warna hitam bagi yang tidak berhijab. Untuk yang berhijab, kerudung bersih, rapi dan tampak identitas.</label>
+
+                      <div class="input-group input-group-outline mb-2">
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options20" id="radio39" value="1" required>
+                        <label class="form-check-label" for="radio39">Ya</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="radio" name="options20" id="radio40" value="0" required>
+                        <label class="form-check-label" for="radio40">Tidak</label>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="comment">Keterangan :</label>
+                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment20"></textarea>
                       </div>
                     
                       <div class="text-center">

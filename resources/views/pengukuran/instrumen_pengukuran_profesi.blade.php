@@ -48,9 +48,9 @@
                     <form role="form" class="" action="{{ route('hasil-pengukuran-5', $id_pengukuran) }}" method="POST">
                         @csrf
                     <div class="col-12 mb-2 mt-5">
-                        <span class="text-bold">1. Perawat mempunyai peran utama dalam menentukan standar pendidikan dan pelayanan keperawatan	serta menerapkannya dalam kegiatan pelayanan dan pendidikan keperawatan</span>
+                        <h6 class="text-bold">1. Perawat mempunyai peran utama dalam menentukan standar pendidikan dan pelayanan keperawatan	serta menerapkannya dalam kegiatan pelayanan dan pendidikan keperawatan</h6>
                     </div>
-                    <label class="form-label">Perawat wajib memberikan masukan kepada	institusi pendidikan tentang kemajuan ilmu pengetahuan	dan teknologi keperawatan</label>
+                    <label class="form-label">Perawat wajib memberikan masukan dan sosialisasi kepada	institusi pendidikan tentang kemajuan ilmu pengetahuan dan teknologi keperawatan dan menyusun standar yang dibutuhkan profesi pelayanan dan pendidikan</label>
                       <div class="input-group input-group-outline mb-2">
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options1" id="radio1" value="1" required>
