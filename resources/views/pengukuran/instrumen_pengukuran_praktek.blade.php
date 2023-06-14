@@ -391,6 +391,7 @@
                       <label class="form-label">f. Laki-laki: rambut rapi tidak menutupi telinga dan kerah baju, tidak dikuncir dan jika berjenggot tampak rapi. Perempuan : rambut diikat menggunakan cepol/hairnet warna hitam bagi yang tidak berhijab. Untuk yang berhijab, kerudung bersih, rapi dan tampak identitas.</label>
 
                       <div class="input-group input-group-outline mb-2">
+                        <label for="">f. </label>
                       <div class="form-check form-check-inline">
                         <input class="form-check-input" type="radio" name="options20" id="radio39" value="1" required>
                         <label class="form-check-label" for="radio39">Ya</label>

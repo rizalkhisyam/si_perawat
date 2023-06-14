@@ -23,7 +23,7 @@ class PengukuranController extends Controller
     {
         $perawats = Perawat::all();
         $ruangans = Ruangan::all();
-        return view('Pengukuran', [
+        return view('pengukuran', [
             'title' => 'Pengukuran',
             'data_perawats' => $perawats,
             'data_ruangans' => $ruangans
@@ -82,7 +82,7 @@ class PengukuranController extends Controller
         $request->session()->put('name', $data_perawat[1]);
         // dd($request->session()->get('name'));
         $data_perawat = Perawat::find($data_perawat[0]);
-        return view('Pengukuran/Instrumen_pengukuran_klien', [
+        return view('Pengukuran/instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawat' => $data_perawat,
             'id_ruangan' => $data_ruangan[0],
@@ -94,7 +94,7 @@ class PengukuranController extends Controller
     public function instrumen_praktek($id){
         $dataPengukuran = DB::table('pengukurans')->join('perawats', 'pengukurans.id_perawat', '=', 'perawats.id')
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
-        return view('Pengukuran/Instrumen_pengukuran_praktek', [
+        return view('Pengukuran/instrumen_pengukuran_praktek', [
             'title' => 'Pengukuran Perawat dan Praktek',
             'data' => $dataPengukuran[0],
             'id_pengukuran' => $id
@@ -114,7 +114,7 @@ class PengukuranController extends Controller
     public function instrumen_teman($id){
         $dataPengukuran = DB::table('pengukurans')->join('perawats', 'pengukurans.id_perawat', '=', 'perawats.id')
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
-        return view('Pengukuran/Instrumen_pengukuran_teman', [
+        return view('Pengukuran/instrumen_pengukuran_teman', [
             'title' => 'Pengukuran Perawat dan Teman Sejawat',
             'data' => $dataPengukuran[0],
             'id_pengukuran' => $id
@@ -124,7 +124,7 @@ class PengukuranController extends Controller
     public function instrumen_profesi($id){
         $dataPengukuran = DB::table('pengukurans')->join('perawats', 'pengukurans.id_perawat', '=', 'perawats.id')
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
-        return view('Pengukuran/Instrumen_pengukuran_profesi', [
+        return view('Pengukuran/instrumen_pengukuran_profesi', [
             'title' => 'Pengukuran Perawat dan Profesi',
             'data' => $dataPengukuran[0],
             'id_pengukuran' => $id
@@ -156,7 +156,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_1' => $skor]);
         $dataPengukuran = pengukuran::find($id);
         
-        return view('Pengukuran/Hasil_klien', [
+        return view('Pengukuran/hasil_klien', [
             'title' => 'Hasil Pengukuran Perawat dan Klien',
             'data' => $dataPengukuran
         ]);
@@ -171,7 +171,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_2' => $skor2]);
         $dataPengukuran = pengukuran::find($id);
 
-        return view('Pengukuran/Hasil_praktek', [
+        return view('Pengukuran/hasil_praktek', [
             'title' => 'Hasil Pengukuran Perawat dan Praktek',
             'data' => $dataPengukuran
         ]);
@@ -186,7 +186,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_3' => $skor3]);
         $dataPengukuran = pengukuran::find($id);
 
-        return view('Pengukuran/Hasil_masyarakat', [
+        return view('Pengukuran/hasil_masyarakat', [
             'title' => 'Hasil Pengukuran Perawat dan Masyarakat',
             'data' => $dataPengukuran
         ]);
@@ -201,7 +201,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_4' => $skor4]);
         $dataPengukuran = pengukuran::find($id);
 
-        return view('Pengukuran/Hasil_teman', [
+        return view('Pengukuran/hasil_teman', [
             'title' => 'Hasil Pengukuran Perawat dan Teman Sejawat',
             'data' => $dataPengukuran
         ]);
@@ -243,7 +243,7 @@ class PengukuranController extends Controller
             'kategori_nilai' => $nilai_kategori
         ]);
         $dataPengukuranNew = pengukuran::find($id);
-        return view('Pengukuran/Hasil_profesi', [
+        return view('Pengukuran/hasil_profesi', [
             'title' => 'Hasil Pengukuran Keseluruhan',
             'data' => $dataPengukuranNew
         ]);
