@@ -15,7 +15,7 @@ class RegisterController extends Controller
      */
     public function index()
     {
-        return view('Register', [
+        return view('register', [
             'title' => "Register"
         ]);
     }
