@@ -51,7 +51,7 @@
                         </li>
                     </ul>
                     <div class="text-center">
-                    <a class="btn btn-primary" href="/hasil-pengukuran"" role="button">Hasil Pengukuran</a>
+                    <a class="btn btn-primary" href="/hasil-pengukuran" role="button">Hasil Pengukuran</a>
                     </div>
                     <div class="text-center">
                     <a class="btn btn-light" href="/dashboard" role="button">Kembali Ke Halaman Utama</a>

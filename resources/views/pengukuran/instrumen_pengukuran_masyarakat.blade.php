@@ -47,111 +47,50 @@
                     <div class="container col-lg-10 mt-5">
                     <form role="form" class="" action="{{ route('hasil-pengukuran-3', $id_pengukuran) }}" method="POST">
                         @csrf
-                    <div class="col-12 mb-2">
-                    <h6 class="">1. Perawat mengemban tanggung jawab bersama masyarakat untuk memprakarsai dan mendukung berbagai kegiatan dalam memenuhi kebutuhan dan kesehatan masyarakat</h6>
-                    </div>
-                    <label class="form-label">Perawat dibawah institusi tempat bekerja wajib melakukan kegiatan pengabdian masyarakat satu kali dalam setahun</label>
-                      <div class="input-group input-group-outline mb-2">
-                        <label for="">a. </label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options1" id="radio1" value="1" required>
-                        <label class="form-check-label" for="radio1">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options1" id="radio2" value="0" required>
-                        <label class="form-check-label" for="radio2">Tidak</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="comment">Keterangan :</label>
-                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment1"></textarea>
-                      </div>
 
-                      <label class="form-label">Perawat memperlihatkan perilaku hidup sehat di lingkungan ruang perawatan</label>
-                      <div class="input-group input-group-outline mb-2">
-                        <label for="">b. </label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options2" id="radio3" value="1" required>
-                        <label class="form-check-label" for="radio3">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options2" id="radio4" value="0" required>
-                        <label class="form-check-label" for="radio4">Tidak</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="comment">Keterangan :</label>
-                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment2"></textarea>
-                      </div>
+                        @php 
+                        $char=1;
+                        $albha = 'a'; $char < 'z';
+                        $alp=1;
+                        $numbering = 'a'; $alp < 'z';
+                        $number = 0;
+                        @endphp
 
-                      <label class="form-label">Perawat menciptakan suasana yang tenang dan bersih di ruang rawat</label>
-                      <div class="input-group input-group-outline mb-2">
-                        <label for="">c. </label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options3" id="radio5" value="1" required>
-                        <label class="form-check-label" for="radio5">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options3" id="radio6" value="0" required>
-                        <label class="form-check-label" for="radio6">Tidak</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="comment">Keterangan :</label>
-                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment3"></textarea>
-                      </div>
+                        @foreach($datas as $key => $data)
+                          <div class="col-12 mb-2">
+                          <h6 class="">{{$key+1}}. {{$data->pernyataan}}</h6>
+                          </div>
+                          @foreach($data->sub_kode_etiks as $no => $etik)
 
-                      <label class="form-label">Perawat memastikan fasilitas ruang rawat memadai dan berfungsi dengan baik</label>
-                      <div class="input-group input-group-outline mb-2">
-                        <label for="">d. </label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options4" id="radio7" value="1" required>
-                        <label class="form-check-label" for="radio7">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options4" id="radio8" value="0" required>
-                        <label class="form-check-label" for="radio8">Tidak</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="comment">Keterangan :</label>
-                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment4"></textarea>
-                      </div>
+                          @php 
+                            $numbering++;
+                            $number++;
+                          @endphp
+                          
+                            <label class="form-label mt-2">{{$etik->aktivitas}}</label>
+                            <div class="input-group input-group-outline mb-2">
+                            <label for="">{{ $albha++ }}. </label>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="options{{$numbering}}" id="radio{{$number}}" value="1" required>
+                                <label class="form-check-label" for="radio1">Ya</label>
+                              </div>
+                              <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="options{{$numbering}}" id="radio{{$number++}}" value="0" required>
+                                <label class="form-check-label" for="radio2">Tidak</label>
+                              </div>
+                            </div>
+                            <div class="form-group mb-5">
+                              <label for="comment">Keterangan :</label>
+                              <textarea class="form-control border p-2" rows="5" id="comment">{{$numbering}}</textarea>
+                            </div>
+                            @endforeach
+                            
+                            @php 
+                              $albha = 'a';
+                            @endphp
 
-                      <label class="form-label">Perawat	wajib memberikan informasi pada klien dan keluarga tentang area cakupan pelayanan keperawatan	yang  diberikan	dengan menggunakan media yang disepakati secara berkala</label>
-                      <div class="input-group input-group-outline mb-2">
-                        <label for="">e. </label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio9" value="1" required>
-                        <label class="form-check-label" for="radio9">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options5" id="radio10" value="0" required>
-                        <label class="form-check-label" for="radio10">Tidak</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="comment">Keterangan :</label>
-                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment5"></textarea>
-                      </div>
+                          @endforeach
 
-                      <label class="form-label">Perawat wajib ikut berperan serta dalam mengembangkan teknologi keperawatan</label>
-                      <div class="input-group input-group-outline mb-2">
-                        <label for="">f. </label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options6" id="radio11" value="1" required>
-                        <label class="form-check-label" for="radio11">Ya</label>
-                        </div>
-                        <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options6" id="radio12" value="0" required>
-                        <label class="form-check-label" for="radio12">Tidak</label>
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="comment">Keterangan :</label>
-                        <textarea class="form-control border p-2" rows="5" id="comment" name="comment6"></textarea>
-                      </div>
-                    
                       <div class="text-center">
                         <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Lanjutkan Pengukuran</button>
                       </div>

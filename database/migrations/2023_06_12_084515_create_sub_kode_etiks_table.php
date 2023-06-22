@@ -15,8 +15,8 @@ class CreateSubKodeEtiksTable extends Migration
     {
         Schema::create('sub_kode_etiks', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('id_kode_etik')->unsigned();
-            $table->foreign('id_kode_etik')->references('id')->on('kode_etiks');
+            $table->bigInteger('kode_etik_id')->unsigned();
+            $table->foreign('kode_etik_id')->references('id')->on('kode_etiks')->onDelete('cascade');
             $table->text('aktivitas');
             $table->timestamps();
         });

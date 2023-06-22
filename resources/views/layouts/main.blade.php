@@ -74,6 +74,16 @@
             <span class="nav-link-text ms-1">Ruangan</span>
           </a>
         </li>
+
+        <li class="nav-item">
+          <a class="nav-link text-white {{ ($title === 'Ruangan') ? 'bg-gradient-primary active' : '' }}" href="/ruangan">
+            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
+              <i class="fa fa-book opacity-10"></i>
+            </div>
+            <span class="nav-link-text ms-1">Draft Instrumen</span>
+          </a>
+        </li>
+
         <li class="nav-item">
           <a class="nav-link text-white {{ ($title === 'Pengukuran') ? 'bg-gradient-primary active' : '' }}" href="/pengukuran">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
@@ -82,14 +92,7 @@
             <span class="nav-link-text ms-1">Pengukuran</span>
           </a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link text-white {{ ($title === 'Pengukuran') ? 'bg-gradient-primary active' : '' }}" href="/pengukuran_v2">
-            <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
-              <i class="material-icons opacity-10">category</i>
-            </div>
-            <span class="nav-link-text ms-1">Pengukuran_v2</span>
-          </a>
-        </li>
+
         <li class="nav-item">
           <a class="nav-link text-white " href="/hasil-pengukuran">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">

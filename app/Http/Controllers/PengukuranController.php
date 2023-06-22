@@ -35,7 +35,7 @@ class PengukuranController extends Controller
     public function index_v2()
     {
         $id = 1;
-        $etik = KodeEtik::with('sub_kode_etiks')->where('id_categories', $id)->get();
+        $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id)->get();
         // dd($etik);
         return view('Pengukuran/pengukuran_instrumen_klien', [
             'title' => 'Pengukuran Klien',
@@ -88,52 +88,67 @@ class PengukuranController extends Controller
         $request->session()->put('name', $data_perawat[1]);
         // dd($request->session()->get('name'));
         $data_perawat = Perawat::find($data_perawat[0]);
+        $id_kode = 1;
+        $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         return view('Pengukuran/instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawat' => $data_perawat,
             'id_ruangan' => $data_ruangan[0],
             'nama_ruangan' => $data_ruangan[1],
-            'id_pengukuran' => $id_pengukuran
+            'id_pengukuran' => $id_pengukuran,
+            'datas' => $etik
         ]);
     }
 
     public function instrumen_praktek($id){
         $dataPengukuran = DB::table('pengukurans')->join('perawats', 'pengukurans.id_perawat', '=', 'perawats.id')
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
+        $id_kode = 2;
+        $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         return view('Pengukuran/instrumen_pengukuran_praktek', [
             'title' => 'Pengukuran Perawat dan Praktek',
             'data' => $dataPengukuran[0],
-            'id_pengukuran' => $id
+            'id_pengukuran' => $id,
+            'datas' => $etik
         ]);
     }
 
     public function instrumen_masyarakat($id){
         $dataPengukuran = DB::table('pengukurans')->join('perawats', 'pengukurans.id_perawat', '=', 'perawats.id')
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
+        $id_kode = 3;
+        $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         return view('Pengukuran/Instrumen_pengukuran_masyarakat', [
             'title' => 'Pengukuran Perawat dan Masyarakat',
             'data' => $dataPengukuran[0],
-            'id_pengukuran' => $id
+            'id_pengukuran' => $id,
+            'datas' => $etik
         ]);
     }
 
     public function instrumen_teman($id){
         $dataPengukuran = DB::table('pengukurans')->join('perawats', 'pengukurans.id_perawat', '=', 'perawats.id')
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
+        $id_kode = 4;
+        $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         return view('Pengukuran/instrumen_pengukuran_teman', [
             'title' => 'Pengukuran Perawat dan Teman Sejawat',
             'data' => $dataPengukuran[0],
-            'id_pengukuran' => $id
+            'id_pengukuran' => $id,
+            'datas' => $etik
         ]);
     }
 
     public function instrumen_profesi($id){
         $dataPengukuran = DB::table('pengukurans')->join('perawats', 'pengukurans.id_perawat', '=', 'perawats.id')
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
+        $id_kode = 5;
+        $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         return view('Pengukuran/instrumen_pengukuran_profesi', [
             'title' => 'Pengukuran Perawat dan Profesi',
             'data' => $dataPengukuran[0],
-            'id_pengukuran' => $id
+            'id_pengukuran' => $id,
+            'datas' => $etik
         ]);
     }
 
