@@ -6,8 +6,10 @@ use App\Http\Requests\InstrumentRequest1;
 use App\Models\pengukuran;
 use App\Http\Requests\StorepengukuranRequest;
 use App\Http\Requests\UpdatepengukuranRequest;
+use App\Models\KodeEtik;
 use App\Models\Perawat;
 use App\Models\Ruangan;
+use App\Models\SubKodeEtik;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
@@ -32,8 +34,12 @@ class PengukuranController extends Controller
 
     public function index_v2()
     {
+        $id = 1;
+        $etik = KodeEtik::with('sub_kode_etiks')->where('id_categories', $id)->get();
+        // dd($etik);
         return view('Pengukuran/pengukuran_instrumen_klien', [
-            'title' => 'Pengukuran Klien'
+            'title' => 'Pengukuran Klien',
+            'datas' => $etik
         ]);
     }
 

@@ -33,13 +33,13 @@
                                       </div>
                                     @enderror
 
-                                    <span>Nama Gedung</span>
+                                    <span>Nama Gedung (Optional)</span>
                                     <div class="input-group input-group-outline mb-3">
                                       <input type="text" class="form-control" name="nama_gedung" id="nama_gedung" value="">
                                       <span class="input-group-text" id="inputGroup-sizing-default"></span>
                                     </div>
 
-                                    <span>Daya Tampung</span>
+                                    <span>Daya Tampung (Optional)</span>
                                     <div class="input-group input-group-outline mb-3">
                                       <input type="text" class="form-control" name="daya_tampung" id="daya_tampung" value="">
                                       <span class="input-group-text" id="inputGroup-sizing-default"></span>
