@@ -7,6 +7,7 @@ use App\Http\Requests\StoreKodeEtikRequest;
 use App\Http\Requests\UpdateKodeEtikRequest;
 use App\Models\Category;
 use App\Models\Ruangan;
+use App\Models\SubKodeEtik;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -41,6 +42,16 @@ class KodeEtikController extends Controller
             'datas' => $instrumen,
             'kode' => $kode,
             'category_id' => $id
+        ]);
+    }
+
+    public function index_sub_instrumen($id)
+    {
+        $data = SubKodeEtik::where('kode_etik_id', $id)->get();
+        return view('instrumen/klien/sub_instrumen', [
+            'title' => 'Instrumen',
+            'datas' => $data,
+            'kode_etik_id' => $id
         ]);
     }
 

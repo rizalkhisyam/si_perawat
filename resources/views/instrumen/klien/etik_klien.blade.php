@@ -58,7 +58,7 @@
                     </div>
                     <div class="col-lg-4 mb-5 d-flex">
                         <a class="btn btn-link text-dark mb-3" data-bs-toggle="modal" data-bs-target="#modalEdit{{$data->id}}" ><i class="material-icons text-sm me-2">edit</i>Edit</a>
-                        <a class="btn btn-link mb-0" href="/" style="color: #04009A;"><i class="material-icons text-sm me-2">control_point</i>Detail</a>
+                        <a class="btn btn-link mb-0" href="/sub-instrumen-kategory/{{$data->id}}" style="color: #04009A;"><i class="material-icons text-sm me-2">control_point</i>Detail</a>
                         <a class="btn btn-link text-red mb-0" href="/" ><i class="material-icons text-sm me-2">delete_forever</i>Delete</a>
                     </div>
 

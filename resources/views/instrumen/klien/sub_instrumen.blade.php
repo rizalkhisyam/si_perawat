@@ -12,7 +12,7 @@
                     </div>
 
                     <div class="col-6 d-flex align-items-center">
-                      <h6 class="mb-0">Daftar Pernyataan Instrumen - {{$kode}}</h6>
+                      <h6 class="mb-0">Daftar Aktivitas</h6>
                     </div>
                     <div class="col-6 text-end">
                       <a class="btn bg-gradient-dark mb-0" data-bs-toggle="modal" data-bs-target="#exampleModal" href="javascript:;"><i class="material-icons text-sm">add</i>&nbsp;&nbsp;Tambah Pernyataan</a>
@@ -26,7 +26,7 @@
                               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
                             </div>
                             <div class="modal-body">
-                                <form role="form" action="{{ route('tambah-pernyataan', $category_id) }}" method="POST">
+                                <form role="form" action="{{ route('tambah-aktivitas', $kode_etik_id) }}" method="POST">
                                   @csrf
                                     <span>Aktivitas</span>
                                     <div class="input-group input-group-outline mb-3">
@@ -58,7 +58,6 @@
                     </div>
                     <div class="col-lg-4 mb-5 d-flex">
                         <a class="btn btn-link text-dark mb-3" data-bs-toggle="modal" data-bs-target="#modalEdit{{$data->id}}" ><i class="material-icons text-sm me-2">edit</i>Edit</a>
-                        <a class="btn btn-link mb-0" href="/" style="color: #04009A;"><i class="material-icons text-sm me-2">control_point</i>Detail</a>
                         <a class="btn btn-link text-red mb-0" href="/" ><i class="material-icons text-sm me-2">delete_forever</i>Delete</a>
                     </div>
 
