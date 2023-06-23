@@ -7,7 +7,11 @@
                 <div class="card-header pb-0 p-3">
                         <div class="row">
                             <div class="col-12 d-flex align-items-center">
-                            <h3 class="mb-0">Selamat Datang di E - Kode Etik Perawat</h3>
+                                @if(Auth::user()->id == 1)
+                                    <h3 class="mb-0">Dashboard Admin, E - Kode Etik Perawat</h3>
+                                @else
+                                    <h3 class="mb-0">Selamat Datang di E - Kode Etik Perawat</h3>
+                                @endif
                             </div>
                         </div>
                     </div>

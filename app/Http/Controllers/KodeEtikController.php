@@ -48,10 +48,12 @@ class KodeEtikController extends Controller
     public function index_sub_instrumen($id)
     {
         $data = SubKodeEtik::where('kode_etik_id', $id)->get();
+        $kode_etik = KodeEtik::find($id);
         return view('instrumen/klien/sub_instrumen', [
             'title' => 'Instrumen',
             'datas' => $data,
-            'kode_etik_id' => $id
+            'kode_etik_id' => $id,
+            'pernyataan' => $kode_etik
         ]);
     }
 
@@ -59,6 +61,15 @@ class KodeEtikController extends Controller
     {
         $update = KodeEtik::where('id', $id)->update([
             'pernyataan' => $request->pernyataan
+        ]);
+        session()->flash('success_edit', 'Data berhasil diubah!');
+        return back();
+    }
+
+    public function update_aktivitas(Request $request, $id)
+    {
+        $update = SubKodeEtik::where('id', $id)->update([
+            'aktivitas' => $request->aktivitas
         ]);
         session()->flash('success_edit', 'Data berhasil diubah!');
         return back();
@@ -74,6 +85,16 @@ class KodeEtikController extends Controller
         KodeEtik::create([
             'category_id' => $id,
             'pernyataan' => $request->pernyataan
+        ]);
+
+        return back();
+    }
+
+    public function create_aktivitas(Request $request, $id)
+    {
+        SubKodeEtik::create([
+            'kode_etik_id' => $id,
+            'aktivitas' => $request->aktivitas
         ]);
 
         return back();
@@ -130,8 +151,15 @@ class KodeEtikController extends Controller
      * @param  \App\Models\KodeEtik  $kodeEtik
      * @return \Illuminate\Http\Response
      */
-    public function destroy(KodeEtik $kodeEtik)
+    public function destroy($id)
     {
-        //
+        KodeEtik::find($id)->delete();
+        return back();
+    }
+
+    public function destroy_aktivitas($id)
+    {
+        SubKodeEtik::find($id)->delete();
+        return back();
     }
 }

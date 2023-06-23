@@ -58,8 +58,8 @@
                     </div>
                     <div class="col-lg-4 mb-5 d-flex">
                         <a class="btn btn-link text-dark mb-3" data-bs-toggle="modal" data-bs-target="#modalEdit{{$data->id}}" ><i class="material-icons text-sm me-2">edit</i>Edit</a>
-                        <a class="btn btn-link mb-0" href="/sub-instrumen-kategory/{{$data->id}}" style="color: #04009A;"><i class="material-icons text-sm me-2">control_point</i>Detail</a>
-                        <a class="btn btn-link text-red mb-0" href="/" ><i class="material-icons text-sm me-2">delete_forever</i>Delete</a>
+                        <a class="btn btn-link mb-0" href="/sub-instrumen-kategory/{{$data->id}}" style="color: #04009A;"><i class="material-icons text-sm me-2">control_point</i>Detail Aktivitas</a>
+                        <a class="btn btn-link text-red mb-0" data-bs-toggle="modal" data-bs-target="#modalDelete{{$data->id}}"><i class="material-icons text-sm me-2">delete_forever</i>Delete</a>
                     </div>
 
                     <div class="modal fade" id="modalEdit{{$data->id}}" tabindex="-1" aria-labelledby="modalEdit" aria-hidden="true">
@@ -85,6 +85,32 @@
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
                                       <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <div class="modal fade" id="modalDelete{{$data->id}}" tabindex="-1" aria-labelledby="modalDelete" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="modalDelete">Apakah anda ingin menghapus pernyataan berikut ?</h1>
+                              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form" action="{{ route('delete-pernyataan', $data->id) }}" method="POST">
+                                  @csrf
+                                  @method('DELETE')
+                                    
+                                    <div class="input-group input-group-outline mb-3">
+                                      <h6 class="mb-0 text-sm">"{{$data->pernyataan}}"</h6>
+                                    </div>
+                                    <p style="font-size: 12px;">*Apabila pernyataan ini dihapus, maka aktivitas terkait akan dihapus juga</p>
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
+                                      <button type="submit" class="btn btn-primary">Hapus</button>
                                     </div>
                                 </form>
                             </div>

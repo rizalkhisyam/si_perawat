@@ -81,7 +81,7 @@
                   </div>
                   @error('email')
                       <div class="text-danger mb-2">
-                        {{$message}}
+                        <p style="font-size: 12px;">*{{$message}}</p>
                       </div>
                     @enderror
                   <div class="input-group input-group-outline mb-3">

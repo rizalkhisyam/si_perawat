@@ -204,7 +204,6 @@
                         <option value="Strata Satu">Strata Satu</option>
                         <option value="Magister">Magister</option>
                         <option value="Doctor">Doctor</option>
-                        <option value="Tidak Sekolah">Tidak Sekolah</option>
                       </select>
                     </div>
 

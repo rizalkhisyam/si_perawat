@@ -81,7 +81,7 @@
                             </div>
                             <div class="form-group mb-5">
                               <label for="comment">Keterangan :</label>
-                              <textarea class="form-control border p-2" rows="5" id="comment">{{$numbering}}</textarea>
+                              <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
                             </div>
                             @endforeach
                             

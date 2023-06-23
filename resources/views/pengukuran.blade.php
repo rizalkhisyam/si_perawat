@@ -27,7 +27,7 @@
                     </div>
                     @error('id_perawat')
                       <div class="text-danger">
-                        *Pilih perawat yang akan dilakukan pengukuran
+                        <p style="font-size: 12px;">*Pilih perawat yang akan dilakukan pengukuran</p>
                       </div>
                     @enderror
 
@@ -42,7 +42,7 @@
                     </div>
                     @error('id_ruangan')
                       <div class="text-danger">
-                        *Pilih ruangan perawat
+                      <p style="font-size: 12px;">*Pilih ruangan perawat</p>
                       </div>
                     @enderror
                     <div class="text-center">
