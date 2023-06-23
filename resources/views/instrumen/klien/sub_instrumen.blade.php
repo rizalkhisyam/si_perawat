@@ -22,15 +22,15 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Pernyataan</h1>
+                              <h1 class="modal-title fs-5" id="exampleModalLabel">Tambah Data Aktivitas</h1>
                               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
                             </div>
                             <div class="modal-body">
                                 <form role="form" action="{{ route('tambah-pernyataan', $category_id) }}" method="POST">
                                   @csrf
-                                    <span>Pernyataan</span>
+                                    <span>Aktivitas</span>
                                     <div class="input-group input-group-outline mb-3">
-                                      <textarea class="form-control border p-2" rows="5" id="comment" name="pernyataan" required></textarea>
+                                      <textarea class="form-control border p-2" rows="5" id="comment" name="aktivitas" required></textarea>
                                     </div>
                                     @error('pernyataan')
                                       <div class="text-danger mb-2">
@@ -54,7 +54,7 @@
                 <div class="container row">
                     @foreach($datas as $key => $data)
                     <div class="col-lg-8">
-                        <h6 class="mb-0 text-sm">{{$key+1}}. {{$data->pernyataan}}</h6>
+                        <h6 class="mb-0 text-sm">{{$key+1}}. {{$data->aktivitas}}</h6>
                     </div>
                     <div class="col-lg-4 mb-5 d-flex">
                         <a class="btn btn-link text-dark mb-3" data-bs-toggle="modal" data-bs-target="#modalEdit{{$data->id}}" ><i class="material-icons text-sm me-2">edit</i>Edit</a>
@@ -66,18 +66,18 @@
                         <div class="modal-dialog">
                           <div class="modal-content">
                             <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="modalEdit">Edit Pernyataan</h1>
+                              <h1 class="modal-title fs-5" id="modalEdit">Edit Aktivitas</h1>
                               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
                             </div>
                             <div class="modal-body">
                                 <form role="form" action="{{ route('update-pernyataan', $data->id) }}" method="POST">
                                   @csrf
                                   @method('PATCH')
-                                    <span>Pernyataan</span>
+                                    <span>Aktivitas</span>
                                     <div class="input-group input-group-outline mb-3">
-                                      <textarea class="form-control border p-2" rows="5" id="comment" name="pernyataan" required>{{$data->pernyataan}}</textarea>
+                                      <textarea class="form-control border p-2" rows="5" id="comment" name="pernyataan" required>{{$data->aktivitas}}</textarea>
                                     </div>
-                                    @error('nama_ruangan')
+                                    @error('aktivitas')
                                       <div class="text-danger mb-2">
                                         {{$message}}
                                       </div>

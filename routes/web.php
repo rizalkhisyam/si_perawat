@@ -50,6 +50,7 @@ Route::get('/pengukuran_v2', [PengukuranController::class, 'index_v2'])->name('p
 
 Route::get('/draft-instrument', [KodeEtikController::class, 'index'])->name('draft-instrument')->middleware('auth');
 Route::get('/instrumen-kategory/{id}', [KodeEtikController::class, 'index_instrumen'])->name('kategory-klien')->middleware('auth');
+Route::get('/sub-instrumen-kategory/{id}', [KodeEtikController::class, 'index_sub_instrumen'])->name('sub_instrumen')->middleware('auth');
 Route::patch('/edit-pernyataan/{id}', [KodeEtikController::class, 'update_pernyataan'])->name('update-pernyataan')->middleware('auth');
 Route::post('/tambah-pernyataan/{id}', [KodeEtikController::class, 'create'])->name('tambah-pernyataan')->middleware('auth');
 
