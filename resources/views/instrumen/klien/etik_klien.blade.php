@@ -21,29 +21,17 @@
                               <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
                             </div>
                             <div class="modal-body">
-                                <form role="form" action="{{ route('simpan-data-ruangan') }}" method="POST">
+                                <form role="form" action="{{ route('tambah-pernyataan', $category_id) }}" method="POST">
                                   @csrf
-                                    <span>Nama Ruangan</span>
+                                    <span>Pernyataan</span>
                                     <div class="input-group input-group-outline mb-3">
-                                      <input type="text" class="form-control" name="nama_ruangan" id="nama_ruangan" value="">
+                                      <textarea class="form-control border p-2" rows="5" id="comment" name="pernyataan" required></textarea>
                                     </div>
-                                    @error('nama_ruangan')
+                                    @error('pernyataan')
                                       <div class="text-danger mb-2">
                                         {{$message}}
                                       </div>
                                     @enderror
-
-                                    <span>Nama Gedung (Optional)</span>
-                                    <div class="input-group input-group-outline mb-3">
-                                      <input type="text" class="form-control" name="nama_gedung" id="nama_gedung" value="">
-                                      <span class="input-group-text" id="inputGroup-sizing-default"></span>
-                                    </div>
-
-                                    <span>Daya Tampung (Optional)</span>
-                                    <div class="input-group input-group-outline mb-3">
-                                      <input type="text" class="form-control" name="daya_tampung" id="daya_tampung" value="">
-                                      <span class="input-group-text" id="inputGroup-sizing-default"></span>
-                                    </div>
 
                                     <div class="modal-footer">
                                       <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
@@ -54,7 +42,6 @@
                           </div>
                         </div>
                       </div>
-
                   </div>
                 </div>
 

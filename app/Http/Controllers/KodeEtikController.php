@@ -58,9 +58,14 @@ class KodeEtikController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Request $request, $id)
     {
-        //
+        KodeEtik::create([
+            'category_id' => $id,
+            'pernyataan' => $request->pernyataan
+        ]);
+
+        return back();
     }
 
     /**

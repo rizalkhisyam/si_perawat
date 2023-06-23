@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class KodeEtik extends Model
 {
     use HasFactory;
+    protected $fillable = ['category_id', 'pernyataan'];
 
     public function categories(){
         return $this->belongsTo(Category::class);
