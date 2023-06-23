@@ -74,16 +74,16 @@
             <span class="nav-link-text ms-1">Ruangan</span>
           </a>
         </li>
-
+        @if(Auth::user()->id == 1)
         <li class="nav-item">
-          <a class="nav-link text-white {{ ($title === 'Ruangan') ? 'bg-gradient-primary active' : '' }}" href="/ruangan">
+          <a class="nav-link text-white {{ ($title === 'Instrumen') ? 'bg-gradient-primary active' : '' }}" href="/draft-instrument">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="fa fa-book opacity-10"></i>
             </div>
             <span class="nav-link-text ms-1">Draft Instrumen</span>
           </a>
         </li>
-
+        @endif
         <li class="nav-item">
           <a class="nav-link text-white {{ ($title === 'Pengukuran') ? 'bg-gradient-primary active' : '' }}" href="/pengukuran">
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">

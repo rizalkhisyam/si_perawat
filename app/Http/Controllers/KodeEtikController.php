@@ -5,6 +5,10 @@ namespace App\Http\Controllers;
 use App\Models\KodeEtik;
 use App\Http\Requests\StoreKodeEtikRequest;
 use App\Http\Requests\UpdateKodeEtikRequest;
+use App\Models\Category;
+use App\Models\Ruangan;
+use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class KodeEtikController extends Controller
 {
@@ -15,7 +19,38 @@ class KodeEtikController extends Controller
      */
     public function index()
     {
-        //
+        $cat = Category::all();
+        return view('instrumen/draft_instrumen', [
+            'title' => 'Instrumen',
+            'datas' => $cat
+        ]);
+    }
+
+    public function index_instrumen($id)
+    {
+        $kode = '';
+        if($id == 1) $kode = 'Klien';
+        else if($id == 2) $kode = 'Praktik';
+        else if($id == 3) $kode = 'Masyarakat';
+        else if($id == 4) $kode = 'Teman Sejawat';
+        else if($id == 5) $kode = 'Profesi';
+        $instrumen = DB::table('kode_etiks')->where('category_id', $id)->get();
+        // dd($instrumen);
+        return view('instrumen/klien/etik_klien',[
+            'title' => 'Instrumen',
+            'datas' => $instrumen,
+            'kode' => $kode,
+            'category_id' => $id
+        ]);
+    }
+
+    public function update_pernyataan(Request $request, $id)
+    {
+        $update = KodeEtik::where('id', $id)->update([
+            'pernyataan' => $request->pernyataan
+        ]);
+        session()->flash('success_edit', 'Data berhasil diubah!');
+        return back();
     }
 
     /**

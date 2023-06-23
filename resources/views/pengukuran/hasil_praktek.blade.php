@@ -24,7 +24,7 @@
                         <div class="d-flex flex-column">
                             <h6 class="mb-3 text-sm">Hasil Pengukuran</h6>
                             <span class="mb-2 text-xs">Nilai yang diperoleh : <span class="text-dark font-weight-bold ms-sm-2">{{$data->skor_2}}</span></span>
-                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">20</span></span>
+                            <span class="mb-2 text-xs">Nilai Maksimal : <span class="text-dark ms-sm-2 font-weight-bold">20 {{$total}}</span></span>
                         </div>
                         </li>
                     </ul>

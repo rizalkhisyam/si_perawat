@@ -3,6 +3,7 @@
 use App\Http\Controllers\PerawatController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HasilController;
+use App\Http\Controllers\KodeEtikController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PengukuranController;
 use App\Http\Controllers\RegisterController;
@@ -46,6 +47,10 @@ Route::post('/ruangan', [RuanganController::class, 'store'])->name('simpan-data-
 Route::patch('/update-ruangan/{id}', [RuanganController::class, 'update'])->name('update-ruangan')->middleware('auth');
 Route::get('/pengukuran', [PengukuranController::class, 'index'])->name('pengukuran')->middleware('auth');
 Route::get('/pengukuran_v2', [PengukuranController::class, 'index_v2'])->name('pengukuran_v2')->middleware('auth');
+
+Route::get('/draft-instrument', [KodeEtikController::class, 'index'])->name('draft-instrument')->middleware('auth');
+Route::get('/instrumen-kategory/{id}', [KodeEtikController::class, 'index_instrumen'])->name('kategory-klien')->middleware('auth');
+Route::patch('/edit-pernyataan/{id}', [KodeEtikController::class, 'update_pernyataan'])->name('update-pernyataan')->middleware('auth');
 
 Route::post('/pengukuran-1', [PengukuranController::class, 'pengukuran1'])->name('pengukuran-1')->middleware('auth');
 Route::post('/pengukuran-2', [PengukuranController::class, 'pengukuran2'])->name('pengukuran-2')->middleware('auth');

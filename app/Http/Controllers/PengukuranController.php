@@ -90,6 +90,7 @@ class PengukuranController extends Controller
         $data_perawat = Perawat::find($data_perawat[0]);
         $id_kode = 1;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
+        
         return view('Pengukuran/instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawat' => $data_perawat,
@@ -105,6 +106,7 @@ class PengukuranController extends Controller
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
         $id_kode = 2;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
+        
         return view('Pengukuran/instrumen_pengukuran_praktek', [
             'title' => 'Pengukuran Perawat dan Praktek',
             'data' => $dataPengukuran[0],
@@ -170,76 +172,86 @@ class PengukuranController extends Controller
     public function pengukuran_instrumen1(Request $request, $id){
         $data = $request->all();
         $skor = 0;
+        $id_kode = 1;
         foreach ($data as $key => $value) {
             $skor += (int)$value;
         }
-        // dd($skor);
         $updateNilai = pengukuran::where('id', $id)->update(['skor_1' => $skor]);
         $dataPengukuran = pengukuran::find($id);
-        
+        $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
         return view('Pengukuran/hasil_klien', [
             'title' => 'Hasil Pengukuran Perawat dan Klien',
-            'data' => $dataPengukuran
+            'data' => $dataPengukuran,
+            'total' => $count
         ]);
     }
 
     public function pengukuran_instrumen2(Request $request, $id){
         $data = $request->all();
         $skor2 = 0;
+        $id_kode = 2;
         foreach ($data as $key => $value) {
             $skor2 += (int)$value;
         };
         $updateNilai = pengukuran::where('id', $id)->update(['skor_2' => $skor2]);
         $dataPengukuran = pengukuran::find($id);
-
+        $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
         return view('Pengukuran/hasil_praktek', [
             'title' => 'Hasil Pengukuran Perawat dan Praktek',
-            'data' => $dataPengukuran
+            'data' => $dataPengukuran,
+            'total' => $count
         ]);
     }
 
     public function pengukuran_instrumen3(Request $request, $id){
         $data = $request->all();
         $skor3 = 0;
+        $id_kode = 3;
         foreach ($data as $key => $value) {
             $skor3 += (int)$value;
         };
         $updateNilai = pengukuran::where('id', $id)->update(['skor_3' => $skor3]);
         $dataPengukuran = pengukuran::find($id);
-
+        $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
         return view('Pengukuran/hasil_masyarakat', [
             'title' => 'Hasil Pengukuran Perawat dan Masyarakat',
-            'data' => $dataPengukuran
+            'data' => $dataPengukuran,
+            'total' => $count
         ]);
     }
 
     public function pengukuran_instrumen4(Request $request, $id){
         $data = $request->all();
         $skor4 = 0;
+        $id_kode = 4;
         foreach ($data as $key => $value) {
             $skor4 += (int)$value;
         };
         $updateNilai = pengukuran::where('id', $id)->update(['skor_4' => $skor4]);
         $dataPengukuran = pengukuran::find($id);
-
+        $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
         return view('Pengukuran/hasil_teman', [
             'title' => 'Hasil Pengukuran Perawat dan Teman Sejawat',
-            'data' => $dataPengukuran
+            'data' => $dataPengukuran,
+            'total' => $count
         ]);
     }
 
     public function pengukuran_instrumen5(Request $request, $id){
         $data = $request->all();
         $skor5 = 0;
+        $id_kode = 5;
         $nilai_perilaku = '';
         $nilai_kategori = '';
         foreach ($data as $key => $value) {
             $skor5 += (int)$value;
         };
+        $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
+        $total_instrumen = SubKodeEtik::with('kode_etiks')->count();
         $updateNilai = pengukuran::where('id', $id)->update(['skor_5' => $skor5]);
         $dataPengukuran = pengukuran::find($id);
         $skorTotal = $dataPengukuran->skor_1+$dataPengukuran->skor_2+$dataPengukuran->skor_3+$dataPengukuran->skor_4+$dataPengukuran->skor_5;
-        $nilaiInterval = round(($skorTotal/60)*100);
+        $nilaiInterval = round(($skorTotal/$total_instrumen)*100);
         if($nilaiInterval <= 49){
             $nilai_perilaku = 'D';
             $nilai_kategori = 'Buruk';
@@ -264,9 +276,12 @@ class PengukuranController extends Controller
             'kategori_nilai' => $nilai_kategori
         ]);
         $dataPengukuranNew = pengukuran::find($id);
+
         return view('Pengukuran/hasil_profesi', [
             'title' => 'Hasil Pengukuran Keseluruhan',
-            'data' => $dataPengukuranNew
+            'data' => $dataPengukuranNew,
+            'total' => $count,
+            'total_instrumen' => $total_instrumen
         ]);
     }
 
