@@ -240,13 +240,21 @@ class PengukuranController extends Controller
     public function pengukuran_instrumen5(Request $request, $id){
         $data = $request->all();
         $skor5 = 0;
-        $id_kode = 5;
+        $id_kode_1 = 1;
+        $id_kode_2 = 2;
+        $id_kode_3 = 3;
+        $id_kode_4 = 4;
+        $id_kode_5 = 5;
         $nilai_perilaku = '';
         $nilai_kategori = '';
         foreach ($data as $key => $value) {
             $skor5 += (int)$value;
         };
-        $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
+        $count1 = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode_1)->count();
+        $count2 = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode_2)->count();
+        $count3 = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode_3)->count();
+        $count4 = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode_4)->count();
+        $count5 = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode_5)->count();
         $total_instrumen = SubKodeEtik::with('kode_etiks')->count();
         $updateNilai = pengukuran::where('id', $id)->update(['skor_5' => $skor5]);
         $dataPengukuran = pengukuran::find($id);
@@ -280,7 +288,11 @@ class PengukuranController extends Controller
         return view('Pengukuran/hasil_profesi', [
             'title' => 'Hasil Pengukuran Keseluruhan',
             'data' => $dataPengukuranNew,
-            'total' => $count,
+            'total1' => $count1,
+            'total2' => $count2,
+            'total3' => $count3,
+            'total4' => $count4,
+            'total5' => $count5,
             'total_instrumen' => $total_instrumen
         ]);
     }
