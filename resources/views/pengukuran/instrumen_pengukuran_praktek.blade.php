@@ -44,7 +44,7 @@
                         </div>
                         </li>
                     </ul>
-                    <div class="container col-lg-10 mt-5">
+                    <div class="container col-lg-8 mt-5">
                     <form role="form" class="" action="{{ route('hasil-pengukuran-2', $id_pengukuran) }}" method="POST">
                     @csrf
                     

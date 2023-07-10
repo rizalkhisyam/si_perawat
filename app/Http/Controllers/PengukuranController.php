@@ -37,7 +37,7 @@ class PengukuranController extends Controller
         $id = 1;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id)->get();
         // dd($etik);
-        return view('Pengukuran/pengukuran_instrumen_klien', [
+        return view('pengukuran/pengukuran_instrumen_klien', [
             'title' => 'Pengukuran Klien',
             'datas' => $etik
         ]);
@@ -65,7 +65,7 @@ class PengukuranController extends Controller
             'id_ruangan' => $data_ruangan[0],
             'id_user' => Auth::user()->id
         ]);
-        return view('Instrumen1', [
+        return view('instrumen1', [
             'title' => 'Pengukuran'
         ]);
     }
@@ -91,7 +91,7 @@ class PengukuranController extends Controller
         $id_kode = 1;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         
-        return view('Pengukuran/instrumen_pengukuran_klien', [
+        return view('pengukuran/instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawat' => $data_perawat,
             'id_ruangan' => $data_ruangan[0],
@@ -107,7 +107,7 @@ class PengukuranController extends Controller
         $id_kode = 2;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         
-        return view('Pengukuran/instrumen_pengukuran_praktek', [
+        return view('pengukuran/instrumen_pengukuran_praktek', [
             'title' => 'Pengukuran Perawat dan Praktek',
             'data' => $dataPengukuran[0],
             'id_pengukuran' => $id,
@@ -120,7 +120,7 @@ class PengukuranController extends Controller
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
         $id_kode = 3;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
-        return view('Pengukuran/Instrumen_pengukuran_masyarakat', [
+        return view('pengukuran/instrumen_pengukuran_masyarakat', [
             'title' => 'Pengukuran Perawat dan Masyarakat',
             'data' => $dataPengukuran[0],
             'id_pengukuran' => $id,
@@ -133,7 +133,7 @@ class PengukuranController extends Controller
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
         $id_kode = 4;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
-        return view('Pengukuran/instrumen_pengukuran_teman', [
+        return view('pengukuran/instrumen_pengukuran_teman', [
             'title' => 'Pengukuran Perawat dan Teman Sejawat',
             'data' => $dataPengukuran[0],
             'id_pengukuran' => $id,
@@ -146,7 +146,7 @@ class PengukuranController extends Controller
         ->select('pengukurans.ruangan', 'pengukurans.id_ruangan', 'pengukurans.nama', 'perawats.status', 'perawats.jenjang_karir', 'perawats.jenis_kelamin')->where('pengukurans.id', $id)->get();
         $id_kode = 5;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
-        return view('Pengukuran/instrumen_pengukuran_profesi', [
+        return view('pengukuran/instrumen_pengukuran_profesi', [
             'title' => 'Pengukuran Perawat dan Profesi',
             'data' => $dataPengukuran[0],
             'id_pengukuran' => $id,
@@ -179,7 +179,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_1' => $skor]);
         $dataPengukuran = pengukuran::find($id);
         $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
-        return view('Pengukuran/hasil_klien', [
+        return view('pengukuran/hasil_klien', [
             'title' => 'Hasil Pengukuran Perawat dan Klien',
             'data' => $dataPengukuran,
             'total' => $count
@@ -196,7 +196,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_2' => $skor2]);
         $dataPengukuran = pengukuran::find($id);
         $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
-        return view('Pengukuran/hasil_praktek', [
+        return view('pengukuran/hasil_praktek', [
             'title' => 'Hasil Pengukuran Perawat dan Praktek',
             'data' => $dataPengukuran,
             'total' => $count
@@ -213,7 +213,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_3' => $skor3]);
         $dataPengukuran = pengukuran::find($id);
         $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
-        return view('Pengukuran/hasil_masyarakat', [
+        return view('pengukuran/hasil_masyarakat', [
             'title' => 'Hasil Pengukuran Perawat dan Masyarakat',
             'data' => $dataPengukuran,
             'total' => $count
@@ -230,7 +230,7 @@ class PengukuranController extends Controller
         $updateNilai = pengukuran::where('id', $id)->update(['skor_4' => $skor4]);
         $dataPengukuran = pengukuran::find($id);
         $count = DB::table('sub_kode_etiks')->join('kode_etiks', 'sub_kode_etiks.kode_etik_id', '=', 'kode_etiks.id')->join('categories', 'kode_etiks.category_id', '=', 'categories.id')->where('categories.id', $id_kode)->count();
-        return view('Pengukuran/hasil_teman', [
+        return view('pengukuran/hasil_teman', [
             'title' => 'Hasil Pengukuran Perawat dan Teman Sejawat',
             'data' => $dataPengukuran,
             'total' => $count
@@ -285,7 +285,7 @@ class PengukuranController extends Controller
         ]);
         $dataPengukuranNew = pengukuran::find($id);
 
-        return view('Pengukuran/hasil_profesi', [
+        return view('pengukuran/hasil_profesi', [
             'title' => 'Hasil Pengukuran Keseluruhan',
             'data' => $dataPengukuranNew,
             'total1' => $count1,
@@ -299,27 +299,27 @@ class PengukuranController extends Controller
 
     public function pengukuran3()
     {
-        return view('Instrumen3', [
+        return view('instrumen3', [
             'title' => 'Pengukuran'
         ]);
     }
 
     public function pengukuran4()
     {
-        return view('Instrumen4', [
+        return view('instrumen4', [
             'title' => 'Pengukuran'
         ]);
     }
 
     public function pengukuran5()
     {
-        return view('Instrumen5', [
+        return view('instrumen5', [
             'title' => 'Pengukuran'
         ]);
     }
 
     public function instrumen1(){
-        return view('Instrumen1', [
+        return view('instrumen1', [
             'title' => 'Pengukuran'
         ]);
     }
@@ -331,7 +331,7 @@ class PengukuranController extends Controller
      */
     public function create()
     {
-        return view('Instrumen1', [
+        return view('instrumen1', [
             'title' => 'Pengukuran'
         ]);
     }
