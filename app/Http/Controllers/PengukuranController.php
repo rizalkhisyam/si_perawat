@@ -76,9 +76,11 @@ class PengukuranController extends Controller
     {
         $data_perawat = explode('|', $request->id_perawat);
         $data_ruangan = explode('|', $request->id_ruangan);
-
+        $data_perawats = Perawat::find($data_perawat[0]);
         $checkData = pengukuran::updateOrCreate([
             'nama' => $data_perawat[1],
+            'nip' => $data_perawats->nip,
+            'jenjang_karir' => $data_perawats->jenjang_karir,
             'ruangan' => $data_ruangan[1],
             'id_perawat' => $data_perawat[0],
             'id_ruangan' => $data_ruangan[0],
@@ -87,13 +89,12 @@ class PengukuranController extends Controller
         $id_pengukuran = $checkData->id;
         $request->session()->put('name', $data_perawat[1]);
         // dd($request->session()->get('name'));
-        $data_perawat = Perawat::find($data_perawat[0]);
         $id_kode = 1;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         
         return view('pengukuran/instrumen_pengukuran_klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
-            'data_perawat' => $data_perawat,
+            'data_perawat' => $data_perawats,
             'id_ruangan' => $data_ruangan[0],
             'nama_ruangan' => $data_ruangan[1],
             'id_pengukuran' => $id_pengukuran,

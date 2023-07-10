@@ -9,9 +9,9 @@
                     <div class="col-6 d-flex align-items-center">
                       <h6 class="mb-0">Hasil Pengukuran</h6>
                     </div>
-                    <div class="col-6 text-end">
-                      <a class="btn bg-gradient-dark mb-0" href="javascript:;"><i class="material-icons text-sm">print</i>&nbsp;&nbsp;Cetak</a>
-                    </div>
+                    <!-- <div class="col-6 text-end">
+                      <a class="btn bg-gradient-dark mb-0" href="/generate-hasil-pengukuran"><i class="material-icons text-sm">print</i>&nbsp;&nbsp;Cetak</a>
+                    </div> -->
                   </div>
                 </div>
             <div class="card-body px-0 pb-2">
@@ -83,6 +83,13 @@
                         <span class="badge" style="background-color: #DF2E38;">{{$data->kategori_nilai}}</span>
                       </td>
                       @endif
+
+                      <td class="align-middle">
+                      <div class="ms-auto d-flex justify-content-center">
+                        <!-- <button class="btn btn-link text-dark px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="material-icons text-sm me-2">edit</i>Edit</button> -->
+                        <a class="btn btn-link text-dark px-3 mb-0" href="/generate-hasil-pengukuran/{{$data->id}}" ><i class="material-icons text-sm me-2">print</i>Cetak</a>
+                      </div>
+                      </td>
                     </tr>
                     @endforeach
                   </tbody>

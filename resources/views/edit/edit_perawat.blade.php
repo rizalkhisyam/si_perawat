@@ -23,6 +23,12 @@
                       </div>
                     </div>
                     <div class="mb-3">
+                      <label class="form-label">Nomor Induk Pegawai (NIP)</label>
+                      <div class="input-group input-group-outline ">
+                        <input type="text" class="form-control" name="nip" value="{{$data->nip}}">
+                      </div>
+                    </div>
+                    <div class="mb-3">
                       <label class="form-label">Umur (Tahun)</label>
                       <div class="input-group input-group-outline ">
                         <input type="text" class="form-control" name="usia" required value="{{$data->usia}}">
@@ -55,11 +61,14 @@
                     <div class="mb-3">
                       <label class="form-label">Status Pendidikan</label>
                       <div class="input-group input-group-outline ">
-                        <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan">
+                          <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan">
                           <option value="{{$data->status_pendidikan}}" selected hidden>{{$data->status_pendidikan}}</option>
-                          <option value="Strata Satu">Strata Satu</option>
-                          <option value="Magister">Magister</option>
-                          <option value="Doctor">Doctor</option>
+                          <option value="Diploma 3 (D3)">Diploma 3 (D3)</option>
+                          <option value="Strata Satu (S1)">Strata Satu (S1)</option>
+                          <option value="Magister (S2)">Magister (S2)</option>
+                          <option value="Doctor (S3)">Doctor (S3)</option>
+                          <option value="Ners">Ners</option>
+                          <option value="Spesialis">Spesialis</option>
                         </select>
                       </div>
                     </div>

@@ -9,5 +9,5 @@ class pengukuran extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['nama', 'ruangan', 'id_perawat', 'id_user', 'id_ruangan'];
+    protected $fillable = ['nama', 'nip', 'jenjang_karir', 'ruangan', 'id_perawat', 'id_user', 'id_ruangan'];
 }

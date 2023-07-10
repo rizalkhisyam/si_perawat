@@ -44,6 +44,7 @@ class PerawatController extends Controller
     {
 
         Perawat::create([
+            'nip' => $request->nip,
             'nama' => $request->nama,
             'usia' => $request->usia,
             'jenis_kelamin' => $request->jenis_kelamin,
@@ -92,6 +93,7 @@ class PerawatController extends Controller
     {
         // dd($request);
         $update = Perawat::where('id', $id)->update([
+            'nip' => $request->nip,
             'nama' => $request->nama,
             'usia' => $request->usia,
             'status' => $request->status,

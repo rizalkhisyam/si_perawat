@@ -5,6 +5,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\HasilController;
 use App\Http\Controllers\KodeEtikController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\PDFController;
 use App\Http\Controllers\PengukuranController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\RuanganController;
@@ -82,3 +83,5 @@ Route::post('/hasil-pengukuran-instrumen-teman/{id}', [PengukuranController::cla
 
 Route::get('/pengukuran-instrumen-profesi/{id}', [PengukuranController::class, 'instrumen_profesi'])->name('pengukuran-instrumen-profesi')->middleware('auth');
 Route::post('/hasil-pengukuran-instrumen-profesi/{id}', [PengukuranController::class, 'pengukuran_instrumen5'])->name('hasil-pengukuran-5')->middleware('auth');
+
+Route::get('/generate-hasil-pengukuran/{id}', [PDFController::class, 'generatePDF'])->name('download-hasil')->middleware('auth');

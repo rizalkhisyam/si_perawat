@@ -20,6 +20,7 @@
                   <thead>
                     <tr>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama</th>
+                      <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status Pendidikan</th>
                       <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Status Kepegawaian</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Jenjang Karir</th>
                       <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Lama Bekerja</th>
@@ -35,20 +36,25 @@
                             <img src="../assets/img/team-2.jpg" class="avatar avatar-sm me-3 border-radius-lg" alt="user1">
                           </div> -->
                           <div class="d-flex flex-column justify-content-center">
-                            <h6 class="mb-0 text-sm">{{$data->nama}} - {{$data->id}}</h6>
+                            <h6 class="mb-2 text-sm">{{$data->nama}}</h6>
+                            <span class="text-sm mb-2">NIP : {{$data->nip}}</span>
                             <p class="text-xs text-secondary mb-0">{{$data->jenis_kelamin == 'pria' ? 'Laki-laki' : 'Perempuan'}} - {{$data->usia}} Tahun</p>
                           </div>
                         </div>
                       </td>
                       <td>
-                        <p class="text-xs font-weight-bold mb-0">{{$data->status}}</p>
+                        <h6 class="text-xs font-weight-bold mb-0">{{$data->status_pendidikan}}</h6>
+                        <!-- <p class="text-xs text-secondary mb-0">Organization</p> -->
+                      </td>
+                      <td>
+                        <h6 class="text-xs font-weight-bold mb-0">{{$data->status}}</h6>
                         <!-- <p class="text-xs text-secondary mb-0">Organization</p> -->
                       </td>
                       <td class="align-middle text-center text-sm">
                         <span class="badge badge-sm bg-gradient-success">{{$data->jenjang_karir}}</span>
                       </td>
                       <td class="align-middle text-center">
-                        <span class="text-secondary text-xs font-weight-bold">{{$data->lama_bekerja}}</span>
+                        <h6 class="text-xs font-weight-bold mb-0">{{$data->lama_bekerja}}</h6>
                       </td>
                       <td class="align-middle">
                       <div class="ms-auto d-flex justify-content-center">
@@ -71,6 +77,11 @@
                                       <input type="text" class="form-control" name="nama" id="nama" value="{{$data->nama}}">
                                     </div>
 
+                                    <span>Nomor Induk Perawat (NIP)</span>
+                                    <div class="input-group input-group-outline mb-3">
+                                      <input type="text" class="form-control" name="nip" id="nip" value="{{$data->nip}}">
+                                    </div>
+
                                     <span>Usia (Tahun)</span>
                                     <div class="input-group input-group-outline mb-3">
                                       <input type="number" class="form-control" name="usia" id="usia" value="{{$data->usia}}">
@@ -89,10 +100,13 @@
                                     <span>Status Pendidikan</span>
                                     <div class="input-group input-group-outline mb-3">
                                       <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan">
-                                      <option value="{{$data->status_pendidikan}}" selected disabled hidden>{{$data->status_pendidikan}}</option>
-                                        <option value="Strata Satu">Strata Satu</option>
-                                        <option value="Magister">Magister</option>
-                                        <option value="Doctor">Doctor</option>
+                                        <option value="{{$data->status_pendidikan}}" selected disabled hidden>{{$data->status_pendidikan}}</option>
+                                        <option value="Diploma 3 (D3)">Diploma 3 (D3)</option>
+                                        <option value="Strata Satu (S1)">Strata Satu (S1)</option>
+                                        <option value="Magister (S2)">Magister (S2)</option>
+                                        <option value="Doctor (S3)">Doctor (S3)</option>
+                                        <option value="Ners">Ners</option>
+                                        <option value="Spesialis">Spesialis</option>
                                       </select>
                                     </div>
 
@@ -182,6 +196,11 @@
                       <input type="text" class="form-control" name="nama" id="nama" required>
                     </div>
 
+                    <span>Nomor Induk Pegawai (NIP) <p class="text-sm text-danger">*apabila ada</p></span>
+                    <div class="input-group input-group-outline mb-3">
+                      <input type="text" class="form-control" name="nip" id="nip">
+                    </div>
+
                     <span>Usia (Tahun)</span>
                     <div class="input-group input-group-outline mb-3">
                       <input type="number" class="form-control" name="usia" id="usia" required>
@@ -201,9 +220,12 @@
                     <div class="input-group input-group-outline mb-3">
                       <select class="form-control" aria-label="Default select example" name="status_pendidikan" id="status_pendidikan" required>
                         <option selected>-- Pilih salah satu --</option>
-                        <option value="Strata Satu">Strata Satu</option>
-                        <option value="Magister">Magister</option>
-                        <option value="Doctor">Doctor</option>
+                          <option value="Diploma 3 (D3)">Diploma 3 (D3)</option>
+                          <option value="Strata Satu (S1)">Strata Satu (S1)</option>
+                          <option value="Magister (S2)">Magister (S2)</option>
+                          <option value="Doctor (S3)">Doctor (S3)</option>
+                          <option value="Ners">Ners</option>
+                          <option value="Spesialis">Spesialis</option>
                       </select>
                     </div>
 
