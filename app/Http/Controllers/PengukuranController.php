@@ -77,7 +77,7 @@ class PengukuranController extends Controller
         $data_perawat = explode('|', $request->id_perawat);
         $data_ruangan = explode('|', $request->id_ruangan);
         $data_perawats = Perawat::find($data_perawat[0]);
-        $checkData = pengukuran::updateOrCreate([
+        $checkData = pengukuran::create([
             'nama' => $data_perawat[1],
             'nip' => $data_perawats->nip,
             'jenjang_karir' => $data_perawats->jenjang_karir,
