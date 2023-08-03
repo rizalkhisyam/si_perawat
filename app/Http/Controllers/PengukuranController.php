@@ -46,7 +46,7 @@ class PengukuranController extends Controller
     public function klien(){
         $perawats = Perawat::all();
         $ruangans = Ruangan::all();
-        return view('Pengukuran/Klien', [
+        return view('pengukuran/Klien', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawats' => $perawats,
             'data_ruangans' => $ruangans

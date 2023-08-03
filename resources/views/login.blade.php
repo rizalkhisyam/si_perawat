@@ -19,7 +19,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{ asset('img/logo_si.png') }}">
+  <link rel="icon" type="image/png" href="{{ asset('img/logo-new-1.png') }}">
   <title>
   Sistem Informasi Kode Etik Perawat | {{$title}}
   </title>
@@ -54,7 +54,7 @@
                 <div class="bg-gradient-dark shadow-primary border-radius-lg py-3 pe-1">
                   <div class="container row">
                     <div class="col-lg-12 d-flex justify-content-center align-items-center">
-                      <img src="{{ asset('img/logo_si.png') }}" class="navbar-brand-img h-100" alt="main_logo">
+                      <img src="{{ asset('img/logo-new-1.png') }}" style="width: 30%;" class="navbar-brand-img h-100" alt="main_logo">
                       <span class="ms-1 font-weight-bold text-white">E - Kode Etik Perawat</span>
                     </div>
                   </div>

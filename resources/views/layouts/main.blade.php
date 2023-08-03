@@ -19,7 +19,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/apple-icon.png">
-  <link rel="icon" type="image/png" href="{{ asset('img/logo_si.png') }}">
+  <link rel="icon" type="image/png" href="{{ asset('img/logo-new-1.png') }}">
   <title>
   Sistem Informasi Kode Etik Perawat | {{$title}}
   </title>
@@ -43,7 +43,7 @@
     <div class="sidenav-header">
       <i class="fas fa-times p-3 cursor-pointer text-white opacity-5 position-absolute end-0 top-0 d-none d-xl-none" aria-hidden="true" id="iconSidenav"></i>
       <span class="navbar-brand m-0" target="">
-        <img src="{{ asset('img/logo_si.png') }}" class="navbar-brand-img h-100" alt="main_logo">
+        <img src="{{ asset('img/logo-new-1.png') }}" class="navbar-brand-img h-100" alt="main_logo">
         <span class="ms-1 font-weight-bold text-white">E - Kode Etik</span>
       </span>
     </div>
@@ -98,7 +98,7 @@
             <div class="text-white text-center me-2 d-flex align-items-center justify-content-center">
               <i class="material-icons opacity-10">table_view</i>
             </div>
-            <span class="nav-link-text ms-1">Hasil Laporan</span>
+            <span class="nav-link-text ms-1">Hasil Pengukuran</span>
           </a>
         </li>
       </ul>
