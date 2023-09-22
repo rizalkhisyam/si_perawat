@@ -49,10 +49,54 @@
                       <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Mulai Pengukuran</button>
                     </div>
                   </form>
+                  <hr>
                 </div>
                 <div class="col-lg-6 d-flex justify-content-center">
                     <img style="width: 65%; height: 60%" src="{{ asset('img/illustrations/perawat.png') }}" alt="">
                 </div>
+
+                <div class="card-body px-0 pb-2 mb-5">
+                    <div class="d-flex justify-content-center mb-5">
+                        <h6>Draft Pengukuran</h6>
+                    </div>
+                    <div class="table-responsive p-0">
+                      <table class="table align-items-center mb-0">
+                        <thead>
+                          <tr>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama Perawat</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Ruangan</th>
+                            <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Tanggal</th>
+                            <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Action</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          @foreach($drafts as $draft)
+                          <tr id="">
+                            <td>
+                              <div class="d-flex px-2 py-1">
+                                <div class="d-flex flex-column justify-content-center">
+                                  <h6 class="mb-0 text-sm">{{$draft->nama}}</h6>
+                                </div>
+                              </div>
+                            </td>
+                            <td>
+                              <p class="text-sm font-weight-bold mb-0">{{$draft->ruangan}}</p>
+                            </td>
+                            <td>
+                              <p class="text-sm font-weight-bold mb-0">{{$draft->created_at}}</p>
+                            </td>
+                            <td class="align-middle">
+                            <div class="ms-auto d-flex justify-content-center">
+                              <!-- <button class="btn btn-link text-dark px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="material-icons text-sm me-2">edit</i>Edit</button> -->
+                              <a class="btn bg-gradient-primary px-3 mb-0" href="/generate-hasil-pengukuran" ><i class="material-icons text-sm me-2">assignment</i>Lanjutkan Pengukuran</a>
+                            </div>
+                            </td>
+                          </tr>
+                          @endforeach
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
               </div>
             </div>
           </div>

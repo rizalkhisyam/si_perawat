@@ -502,7 +502,8 @@
   <script async defer src="https://buttons.github.io/buttons.js"></script>
   <!-- Control Center for Material Dashboard: parallax effects, scripts for the example pages etc -->
   <script src="{{ asset('js/material-dashboard.min.js') }}"></script>
-  <script src="{{ asset('js/dataTable.js') }}"></script>
+  <!-- <script src="{{ asset('js/dataTable.js') }}"></script> -->
+  <script src="{{ asset('js/moment.js') }}"></script>
   <script>
     $(document).ready( function () {
         $('#table_id').DataTable();
