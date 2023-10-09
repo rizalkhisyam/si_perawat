@@ -16,7 +16,7 @@ class HasilController extends Controller
      */
     public function index()
     {
-        $dataPengukuran = DB::table('pengukurans')->get()->where('id_user', Auth::user()->id)->whereNotNull('kategori_nilai');
+        $dataPengukuran = DB::table('pengukurans')->where('id_user', Auth::user()->id)->whereNotNull('kategori_nilai')->orderBy('id', 'ASC')->get();
         // dd($dataPengukuran);
         return view('hasil', [
             "title" => "Hasil Pengukuran",

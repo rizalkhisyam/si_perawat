@@ -25,7 +25,7 @@ class PengukuranController extends Controller
     {
         $perawats = Perawat::all();
         $ruangans = Ruangan::all();
-        $draft = DB::table('pengukurans')->where('kategori_nilai', null)->where('id_user', Auth::user()->id)->get();
+        $draft = DB::table('pengukurans')->where('kategori_nilai', null)->where('id_user', Auth::user()->id)->orderBy('created_at', 'DESC')->get();
         return view('pengukuran', [
             'title' => 'Pengukuran',
             'data_perawats' => $perawats,
