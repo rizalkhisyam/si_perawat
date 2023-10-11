@@ -62,9 +62,17 @@ class HasilController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function edit($id)
+    public function edit(Request $request, $id)
     {
-        //
+        $dataHasil = pengukuran::where('id', $id)->update([
+            'rekomendasi' => $request->rekomendasi
+        ]);
+        $dataPengukuran = DB::table('pengukurans')->where('id_user', Auth::user()->id)->whereNotNull('kategori_nilai')->orderBy('id', 'ASC')->get();
+        // dd($dataPengukuran);
+        return view('hasil', [
+            "title" => "Hasil Pengukuran",
+            "datas" => $dataPengukuran
+        ]);
     }
 
     /**

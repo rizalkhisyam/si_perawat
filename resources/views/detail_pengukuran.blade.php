@@ -39,6 +39,12 @@
             padding: 20px;
         }
         .ttd {
+            float: left;
+            /* border: solid 1px; */
+            margin-top: 10px;
+            width: 250px;
+        }
+        .ttd2 {
             float: right;
             /* border: solid 1px; */
             margin-top: 10px;
@@ -101,15 +107,19 @@
     </div>
     <div class="no-bordered" style="margin-top: 20px;">
         <p style="margin-left: 20px;">Rekomendasi :</p>
-        <p style="margin-left: 20px; margin-right: 20px">.............................................................................................................................................</p>
-        <p style="margin-left: 20px; margin-right: 20px">.............................................................................................................................................</p>
+        <p style="margin-left: 20px; margin-right: 20px; font-weight: bold;">{{$datas->rekomendasi}}</p>
+        <p style="margin-left: 20px;">Masukan atau catatan dari perawat penilai :</p>
         <p style="margin-left: 20px; margin-right: 20px">.............................................................................................................................................</p>
         <p style="margin-left: 20px; margin-right: 20px">.............................................................................................................................................</p>
         <p style="margin-left: 20px; margin-right: 20px">.............................................................................................................................................</p>
        </div>
     <div class="center-margin">
         <div class="title ttd" style="margin-top: 20px;">
-            <p>...</p>
+            <p>Perawat Penilai</p>
+            <p style="margin-top: 50px;">..............................................</p>
+        </div>
+        <div class="title ttd2" style="margin-top: 20px;">
+            <p>Perawat yang dinilai</p>
             <p style="margin-top: 50px;">..............................................</p>
         </div>
     </div>

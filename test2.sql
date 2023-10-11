@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 09, 2023 at 11:21 AM
+-- Generation Time: Oct 11, 2023 at 11:56 AM
 -- Server version: 10.4.24-MariaDB
 -- PHP Version: 8.0.19
 
@@ -175,15 +175,16 @@ CREATE TABLE `pengukurans` (
 INSERT INTO `pengukurans` (`id`, `nama`, `nip`, `jenjang_karir`, `ruangan`, `id_perawat`, `id_user`, `id_ruangan`, `skor_1`, `skor_2`, `skor_3`, `skor_4`, `skor_5`, `total_skor`, `nilai_interval`, `nilai_perilaku`, `kategori_nilai`, `rekomendasi`, `created_at`, `updated_at`) VALUES
 (3, 'Florence Nightingale', NULL, NULL, 'Irna 3 Bedah', 1, 2, 2, 0, 10, 2, 5, 6, 23, '38', 'D', 'Buruk', NULL, '2023-06-24 00:27:31', '2023-06-24 00:43:47'),
 (4, 'Florence Nightingale', NULL, NULL, 'Irna 5 Obgyn dan Perina', 1, 2, 4, 15, 20, 6, 9, 10, 60, '100', 'A', 'Prima', NULL, '2023-06-24 00:39:15', '2023-06-24 00:40:55'),
-(5, 'Florence Nightingale', NULL, NULL, 'NICU/PIC', 1, 1, 8, 15, 20, 6, 9, 10, 60, '100', 'A', 'Prima', NULL, '2023-06-24 17:59:35', '2023-06-24 18:01:38'),
+(5, 'Florence Nightingale', NULL, NULL, 'NICU/PIC', 1, 1, 8, 15, 20, 6, 9, 10, 60, '100', 'A', 'Prima', 'Pertahankan perilaku yang sudah dalam kategori  “Prima” ini dalam menjalankan tugas dan memberikan asuhan keperawatan sebagai perawat yang profesional', '2023-06-24 17:59:35', '2023-10-10 23:46:02'),
 (6, 'Florence Nightingale', NULL, NULL, 'ICU B51', 1, 3, 34, 9, 6, 6, 8, 10, 39, '65', 'C', 'Cukup', NULL, '2023-06-25 19:02:32', '2023-06-25 19:04:28'),
 (7, 'Florence Nightingale', NULL, NULL, 'Irna 6 Medik', 1, 3, 5, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-06-26 19:26:50', '2023-06-26 19:26:50'),
 (8, 'Florence Nightingale', NULL, NULL, 'Poli ParuPoli THT', 1, 1, 19, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-10 02:11:16', '2023-07-10 02:11:16'),
 (9, 'Florence Nightingale', NULL, NULL, 'Poli Penyakit Dalam', 1, 1, 18, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-10 02:20:49', '2023-07-10 02:20:49'),
-(10, 'Florence Nightingale', '1987082820190320', 'Perawat Klinis', 'Poli Anak', 1, 1, 1, 0, 0, 6, 9, 5, 20, '33', 'D', 'Buruk', NULL, '2023-07-10 02:22:14', '2023-07-10 02:27:10'),
+(10, 'Florence Nightingale', '1987082820190320', 'Perawat Klinis', 'Poli Anak', 1, 1, 1, 0, 0, 6, 9, 5, 20, '33', 'D', 'Buruk', 'testing rekomendasi', '2023-07-10 02:22:14', '2023-10-10 23:45:45'),
 (11, 'Virginia Henderson', 'g72218060', 'Perawat Klinis', 'Poli Anak', 3, 1, 1, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-07-10 20:15:26', '2023-07-10 20:15:26'),
 (12, 'Virginia Henderson', 'g72218060', 'Perawat Klinis', 'Poli Anak', 3, 1, 1, 15, 13, 5, 7, 10, 50, '83', 'B', 'Baik', NULL, '2023-07-10 20:15:48', '2023-07-10 20:18:04'),
-(13, 'Florence Nightingale', '1987082820190320', 'Perawat Klinis', 'Ruang IGD', 1, 1, 11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-02 21:28:50', '2023-08-02 21:28:50');
+(13, 'Florence Nightingale', '1987082820190320', 'Perawat Klinis', 'Ruang IGD', 1, 1, 11, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL, '2023-08-02 21:28:50', '2023-08-02 21:28:50'),
+(14, 'Virginia Henderson', 'g72218060', 'Perawat Klinis', 'STROKE Unit', 3, 1, 9, 15, 20, 6, 9, 10, 60, '100', 'A', 'Prima', 'Pertahankan perilaku yang sudah dalam kategori  “Prima” ini dalam menjalankan tugas dan memberikan asuhan keperawatan sebagai perawat yang profesional', '2023-10-10 21:28:17', '2023-10-10 23:45:55');
 
 -- --------------------------------------------------------
 
@@ -532,7 +533,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pengukurans`
 --
 ALTER TABLE `pengukurans`
-  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT for table `perawats`

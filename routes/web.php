@@ -68,6 +68,8 @@ Route::post('/pengukuran-5', [PengukuranController::class, 'pengukuran5'])->name
 Route::get('/pengukuran-klien', [PengukuranController::class, 'klien'])->name('pengukuran-klien')->middleware('auth');
 Route::get('/hasil-pengukuran', [HasilController::class, 'index'])->name('hasil');
 
+Route::patch('/edit-rekomendasi/{id}', [HasilController::class, 'edit'])->name('update-hasil')->middleware('auth');
+
 //new route
 Route::post('/pengukuran-instrumen-klien', [PengukuranController::class, 'instrumen_klien'])->name('pengukuran-instrumen-klien')->middleware('auth');
 Route::post('/hasil-pengukuran-instrumen-klien/{id}', [PengukuranController::class, 'pengukuran_instrumen1'])->name('hasil-pengukuran-1')->middleware('auth');

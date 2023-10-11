@@ -86,11 +86,41 @@
 
                       <td class="align-middle">
                       <div class="ms-auto d-flex justify-content-center">
-                        <!-- <button class="btn btn-link text-dark px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalEdit"><i class="material-icons text-sm me-2">edit</i>Edit</button> -->
+                        <button class="btn btn-link text-dark px-3 mb-0" data-bs-toggle="modal" data-bs-target="#modalEdit{{$data->id}}"><i class="material-icons text-sm me-2">edit</i>Edit</button>
                         <a class="btn btn-link text-dark px-3 mb-0" href="/generate-hasil-pengukuran/{{$data->id}}" ><i class="material-icons text-sm me-2">print</i>Cetak</a>
                       </div>
                       </td>
                     </tr>
+
+                    <div class="modal fade" id="modalEdit{{$data->id}}" tabindex="-1" aria-labelledby="modalEdit" aria-hidden="true">
+                        <div class="modal-dialog">
+                          <div class="modal-content">
+                            <div class="modal-header">
+                              <h1 class="modal-title fs-5" id="modalEdit">Edit Rekomendasi</h1>
+                              <button type="button" class="btn" data-bs-dismiss="modal" aria-label="Close">x</button>
+                            </div>
+                            <div class="modal-body">
+                                <form role="form" action="{{ route('update-hasil', $data->id) }}" method="POST">
+                                  @csrf
+                                  @method('PATCH')
+                                    <span>Rekomendasi</span>
+                                    <div class="input-group input-group-outline mb-3">
+                                      <textarea class="form-control border p-2" rows="5" id="comment" name="rekomendasi" required>{{$data->rekomendasi}}</textarea>
+                                    </div>
+                                    @error('aktivitas')
+                                      <div class="text-danger mb-2">
+                                        {{$message}}
+                                      </div>
+                                    @enderror
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-light" data-bs-dismiss="modal">Tutup</button>
+                                      <button type="submit" class="btn btn-primary">Simpan</button>
+                                    </div>
+                                </form>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     @endforeach
                   </tbody>
                 </table>

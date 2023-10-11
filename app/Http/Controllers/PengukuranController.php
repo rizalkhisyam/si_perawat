@@ -8,6 +8,7 @@ use App\Http\Requests\StorepengukuranRequest;
 use App\Http\Requests\UpdatepengukuranRequest;
 use App\Models\KodeEtik;
 use App\Models\Perawat;
+use App\Models\Rekomendasi;
 use App\Models\Ruangan;
 use App\Models\SubKodeEtik;
 use Illuminate\Http\Request;
@@ -250,6 +251,7 @@ class PengukuranController extends Controller
         $id_kode_5 = 5;
         $nilai_perilaku = '';
         $nilai_kategori = '';
+        $rekomendasi = '';
         foreach ($data as $key => $value) {
             $skor5 += (int)$value;
         };
@@ -261,31 +263,37 @@ class PengukuranController extends Controller
         $total_instrumen = SubKodeEtik::with('kode_etiks')->count();
         $updateNilai = pengukuran::where('id', $id)->update(['skor_5' => $skor5]);
         $dataPengukuran = pengukuran::find($id);
+        $dataRekomendasi = Rekomendasi::all();
         $skorTotal = $dataPengukuran->skor_1+$dataPengukuran->skor_2+$dataPengukuran->skor_3+$dataPengukuran->skor_4+$dataPengukuran->skor_5;
         $nilaiInterval = round(($skorTotal/$total_instrumen)*100);
         if($nilaiInterval <= 49){
             $nilai_perilaku = 'D';
             $nilai_kategori = 'Buruk';
+            $rekomendasi = $dataRekomendasi[3]->deskripsi;
         }
         else if($nilaiInterval >= 50 && $nilaiInterval <= 69){
             $nilai_perilaku = 'C';
             $nilai_kategori = 'Cukup';
+            $rekomendasi = $dataRekomendasi[2]->deskripsi;
         }
         else if($nilaiInterval >= 70 && $nilaiInterval <= 89){
             $nilai_perilaku = 'B';
             $nilai_kategori = 'Baik';
+            $rekomendasi = $dataRekomendasi[1]->deskripsi;
         }
         else if($nilaiInterval >=90 && $nilaiInterval <=100){
             $nilai_perilaku = 'A';
             $nilai_kategori = 'Prima';
+            $rekomendasi = $dataRekomendasi[0]->deskripsi;
         }
         // dd($nilai_perilaku, $nilai_kategori);
         $updateData = pengukuran::where('id', $id)->update([
             'total_skor' => $skorTotal,
             'nilai_interval' => $nilaiInterval,
             'nilai_perilaku' => $nilai_perilaku,
-            'kategori_nilai' => $nilai_kategori
-        ]);
+            'kategori_nilai' => $nilai_kategori,
+            'rekomendasi' => $rekomendasi
+        ]); 
         $dataPengukuranNew = pengukuran::find($id);
 
         return view('pengukuran/hasil_profesi', [
