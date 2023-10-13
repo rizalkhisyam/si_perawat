@@ -91,16 +91,18 @@ class PengukuranController extends Controller
         ]);
         $id_pengukuran = $checkData->id;
         $request->session()->put('name', $data_perawat[1]);
+        $dataPengukuran = pengukuran::find($id_pengukuran);
         // dd($request->session()->get('name'));
         $id_kode = 1;
         $etik = KodeEtik::with('sub_kode_etiks')->where('category_id', $id_kode)->get();
         
-        return view('pengukuran/instrumen_pengukuran_klien', [
+        return view('pengukuran_new/instrumen1', [
             'title' => 'Pengukuran Perawat Dan Klien',
             'data_perawat' => $data_perawats,
             'id_ruangan' => $data_ruangan[0],
             'nama_ruangan' => $data_ruangan[1],
             'id_pengukuran' => $id_pengukuran,
+            'data_pengukuran' => $dataPengukuran,
             'datas' => $etik
         ]);
     }
@@ -305,33 +307,6 @@ class PengukuranController extends Controller
             'total4' => $count4,
             'total5' => $count5,
             'total_instrumen' => $total_instrumen
-        ]);
-    }
-
-    public function pengukuran3()
-    {
-        return view('instrumen3', [
-            'title' => 'Pengukuran'
-        ]);
-    }
-
-    public function pengukuran4()
-    {
-        return view('instrumen4', [
-            'title' => 'Pengukuran'
-        ]);
-    }
-
-    public function pengukuran5()
-    {
-        return view('instrumen5', [
-            'title' => 'Pengukuran'
-        ]);
-    }
-
-    public function instrumen1(){
-        return view('instrumen1', [
-            'title' => 'Pengukuran'
         ]);
     }
 
