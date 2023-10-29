@@ -36,7 +36,7 @@
             <div class="col-lg-12 steps-form mb-7 mt-5">
                         <div class="steps-row setup-panel">
                             <div class="steps-step">
-                            <a href="#" type="button" class="btn btn-primary btn-circle">1</a>
+                            <a href="#" type="button" class="btn btn-light btn-circle" >1</a>
                             <p>Perawat dan Klien</p>
                             </div>
                             <div class="steps-step">
@@ -59,70 +59,57 @@
                     </div>
             <ul class="list-group mt-5">
                 <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
-                <div class="d-flex flex-column">
-                    <span class="mb-2 text-xs">Nama Perawat : <span class="text-dark font-weight-bold ms-sm-2">{{$data_perawat->nama}}</span></span>
-                    <span class="mb-2 text-xs">Nama Ruangan : <span class="text-dark font-weight-bold ms-sm-2">{{$nama_ruangan}}</span></span>
-                    <span class="mb-2 text-xs">Jenis Kelamin : <span class="text-dark font-weight-bold ms-sm-2">{{$data_perawat->jenis_kelamin}}</span></span>
-                    <span class="mb-2 text-xs">Status : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->status}}</span></span>
-                    <span class="mb-2 text-xs">Jenjang Karir : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_perawat->jenjang_karir}}</span></span>
-                    <span class="text-xs">Kode Pengukuran : <span class="text-dark ms-sm-2 font-weight-bold">{{$data_pengukuran->id}}</span></span>
-
+                </li>
+                <li class="list-group-item border-0 d-flex p-4 mb-2 bg-gray-100 border-radius-lg">
+                <div class="container">
+                  <table class="table align-items-center mb-0">
+                    <thead>
+                      <tr>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Nama Perawat</th>
+                        <th class="text-uppercase text-secondary text-xxs font-weight-bolder opacity-7 ps-2">Nama Ruangan</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 1</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 2</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 3</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 4</th>
+                        <th class="text-center text-uppercase text-secondary text-xxs font-weight-bolder opacity-7">Hasil 5</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <td>
+                      <div class="d-flex px-2 py-1">
+                            <div class="d-flex flex-column justify-content-center">
+                              <h6 class="mb-0 text-sm">{{$data_pengukuran->nama}}</h6>
+                            </div>
+                          </div>
+                        </td>
+                        <td>
+                          <p class="text-sm font-weight-bold mb-0">{{$data_pengukuran->ruangan}}</p>
+                        </td>
+                        <td>
+                          <p class="text-sm text-center font-weight-bold mb-0">{{$data_pengukuran->skor_1}}</p>
+                        </td>
+                        <td>
+                          <p class="text-sm text-center font-weight-bold mb-0">{{$data_pengukuran->skor_2}}</p>
+                        </td>
+                        <td>
+                          <p class="text-sm text-center font-weight-bold mb-0">{{$data_pengukuran->skor_3}}</p>
+                        </td>
+                        <td>
+                          <p class="text-sm text-center font-weight-bold mb-0">{{$data_pengukuran->skor_4}}</p>
+                        </td>
+                        <td>
+                          <p class="text-sm text-center font-weight-bold mb-0">{{$data_pengukuran->skor_5}}</p>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 </li>
             </ul>
-            <div class="container col-lg-6 mt-5">
-              <form role="form" class="" action="{{ route('hasil-pengukuran-1', $id_pengukuran) }}" method="POST">
-                @csrf
-                @method('POST')
 
-                @php 
-                $char=1;
-                $albha = 'a'; $char < 'z';
-                $alp=1;
-                $numbering = 'a'; $alp < 'z';
-                $number = 0;
-                @endphp
-
-                @foreach($datas as $key => $data)
-                  <div class="col-12 mb-2">
-                  <h6 class="">{{$key+1}}. {{$data->pernyataan}}</h6>
-                  </div>
-                  @foreach($data->sub_kode_etiks as $no => $etik)
-
-                  @php 
-                    $numbering++;
-                    $number++;
-                  @endphp
-                  
-                    <label class="form-label mt-2">{{$etik->aktivitas}}</label>
-                    <div class="input-group input-group-outline mb-2">
-                    <label for="">{{ $albha++ }}. </label>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options{{$numbering}}" id="radio{{$number}}" value="1" required>
-                        <label class="form-check-label" for="radio1">Ya</label>
-                      </div>
-                      <div class="form-check form-check-inline">
-                        <input class="form-check-input" type="radio" name="options{{$numbering}}" id="radio{{$number++}}" value="0" required>
-                        <label class="form-check-label" for="radio2">Tidak</label>
-                      </div>
-                    </div>
-                    <div class="form-group mb-5">
-                      <label for="comment">Keterangan :</label>
-                      <textarea class="form-control border p-2" rows="5" id="comment"></textarea>
-                    </div>
-                    @endforeach
-                    
-                    @php 
-                      $albha = 'a';
-                    @endphp
-
-                  @endforeach
-              
-                <div class="text-center">
-                  <button type="submit" class="btn bg-gradient-primary w-100 my-4 mb-2">Lanjutkan Pengukuran</button>
-                </div>
-
-              </form>
+            <div class="container d-flex justify-content-between">
+              <a type="submit" href="/test" class="btn bg-gradient-light w-20 my-4 mb-2">Simpan Draft</a>
+              <button type="submit" class="btn bg-gradient-primary w-20 my-4 mb-2">Hasil Pengukuran</button>
             </div>
           </div>
         </div>  

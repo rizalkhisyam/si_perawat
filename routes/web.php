@@ -87,3 +87,5 @@ Route::get('/pengukuran-instrumen-profesi/{id}', [PengukuranController::class, '
 Route::post('/hasil-pengukuran-instrumen-profesi/{id}', [PengukuranController::class, 'pengukuran_instrumen5'])->name('hasil-pengukuran-5')->middleware('auth');
 
 Route::get('/generate-hasil-pengukuran/{id}', [PDFController::class, 'generatePDF'])->name('download-hasil')->middleware('auth');
+
+// Route::get('/pengukuran/instrumen-klien/{id}', [PengukuranController::class, 'pengukuran_klien'])
